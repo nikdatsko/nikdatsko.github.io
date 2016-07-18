@@ -1,0 +1,28 @@
+<div class="portfolio">
+    <div class="portfolio-item" ng-repeat="item in nik.items">
+        <a class="popup-link" style="background-image: url({{item.logo}})"
+           ng-class="{
+            'in-right': item.mouseenter === 'right',
+            'in-left': item.mouseenter === 'left',
+            'in-top': item.mouseenter === 'top',
+            'in-bottom': item.mouseenter === 'bottom',
+            'out-right': item.mouseleave === 'right',
+            'out-left': item.mouseleave === 'left',
+            'out-top': item.mouseleave === 'top',
+            'out-bottom': item.mouseleave === 'bottom'
+           }"
+           ng-click="nik.popup(item.index)" ng-mouseenter="nik.itemEnter($event, item.index)"
+           ng-mouseleave="nik.itemLeave($event, item.index)">
+            <img src="img/px.gif">
+            <div class="overlay">
+                <div class="overlay-inner">
+                    <p class="overlay-title">{{item.title}}</p>
+                    <p>
+                        {{item.description}}
+                        <span class="team" ng-if="item.team">in {{item.team}} team</span>
+                    </p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>

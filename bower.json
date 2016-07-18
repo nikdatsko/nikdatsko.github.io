@@ -1,0 +1,29 @@
+{
+  "name": "Resume",
+  "authors": [
+    "Nik Datsko <mydatsko@gmail.com>"
+  ],
+  "description": "Front-end developer resume",
+  "main": "js/app/app.js",
+  "moduleType": [],
+  "keywords": [
+    "angularjs"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "js/bower",
+    ".idea"
+  ],
+  "dependencies": {
+    "angular": "^1.5.3",
+    "angular-route": "^1.5.3",
+    "angular-bootstrap": "^1.2.4",
+    "angular-nvd3": "^1.0.6"
+  },
+  "resolutions": {
+    "angular": ">=1.2.10"
+  }
+}

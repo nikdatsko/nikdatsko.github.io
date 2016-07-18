@@ -1,0 +1,42 @@
+<div class="top_section">
+	<aside>
+		<div class="top_inner">
+			<figure>
+				<img src="img/Nikita.jpg" itemprop="image">
+			</figure>
+			<h1 class="hidden" itemprop="jobTitle">Front-end developer</h1>
+		</div>
+	</aside>
+	<article>
+		<div class="inner first">
+			<p class="only4print">
+				(It is highly recommended to get acquainted with the web version of the resumé at <a href="http://nik.niklenburg.com">nik.niklenburg.com</a>)
+			</p>
+			<h1 itemprop="jobTitle">Front-end developer</h1>
+			<div>
+				<a class="portfolio-link" href="/portfolio">View all</a>
+				<h2>Portfolio:</h2>
+				<div class="carousel-wrap">
+					<uib-carousel class="animated" active="0">
+						<uib-slide ng-repeat="carousel in nik.carousel track by carousel.index" index="carousel.index">
+							<div class="carousel-item" ng-repeat="item in carousel.items">
+								<a class="popup-link in-out-normal" ng-click="nik.popup(item.mainIndex, true)" style="background-image: url({{item.logo}})">
+									<img src="img/px.gif">
+									<div class="overlay">
+										<div class="overlay-inner">
+											<p class="overlay-title">{{item.title}}</p>
+											<p>
+												{{item.description}}
+												<span class="team" ng-if="item.team">in {{item.team}} team</span>
+											</p>
+										</div>
+									</div>
+								</a>
+							</div>
+						</uib-slide>
+					</uib-carousel>
+				</div>
+			</div>
+		</div>
+	</article>
+</div>
