@@ -17,7 +17,7 @@
         self.itemEnter = itemEnter;
         self.itemLeave = itemLeave;
 
-        self.ready = false;
+        self.ready = true;
         self.items = [];
         self.mainItems = [];
         self.carousel = [];
@@ -110,6 +110,11 @@
                 color: '#d62728'
             }
         ];
+        self.occupations = [
+            {name: 'Business owner'},
+            {name: 'HR manager'},
+            {name: 'Developer'}
+        ];
 
         init();
 
@@ -133,6 +138,10 @@
             self.ready = true;
         }
 
+        function startLoad() {
+            self.ready = false;
+        }
+
         function print() {
             $window.scrollTo(0, 0);
             if ($location.path() === '/portfolio') {
@@ -144,6 +153,7 @@
         }
 
         function getPortfolioItems() {
+            startLoad();
             return NikFactory.getPorfolio()
                 .then(function(data) {
                     var mainIndex = 0;

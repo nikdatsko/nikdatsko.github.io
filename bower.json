@@ -21,7 +21,9 @@
     "angular": "^1.5.3",
     "angular-route": "^1.5.3",
     "angular-bootstrap": "^1.2.4",
-    "angular-nvd3": "^1.0.6"
+    "angular-nvd3": "^1.0.6",
+    "angular-ui-select": "^0.18.1",
+    "angular-sanitize": "1.5.3"
   },
   "resolutions": {
     "angular": ">=1.2.10"

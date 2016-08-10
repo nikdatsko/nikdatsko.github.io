@@ -13,7 +13,7 @@
     "postinstall": "bower install"
   },
   "devDependencies": {
-    "browser-sync": "^2.13.0",
+    "browser-sync": "^2.14.0",
     "connect-modrewrite": "^0.9.0",
     "del": "^2.2.0",
     "gulp": "^3.9.0",

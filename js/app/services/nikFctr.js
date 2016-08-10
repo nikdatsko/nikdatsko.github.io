@@ -1,15 +1,16 @@
-(function() {
+(function () {
     'use strict';
 
     angular
         .module('NikApp')
         .factory('NikFactory', NikFactory);
 
-    NikFactory.$inject = ['$http'];
+    NikFactory.$inject = ['$http', '$q'];
 
-    function NikFactory($http) {
+    function NikFactory($http, $q) {
         var service = {
-            getPorfolio: getPorfolio
+            getPorfolio: getPorfolio,
+            sendForm: sendForm
         };
 
         return service;
@@ -27,5 +28,25 @@
                 return error
             }
         }
+
+        function sendForm(params) {
+            var defer = $q.defer();
+            var req = {
+                method: 'POST',
+                url: 'php/form.php',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                data: params
+            };
+
+            $http(req)
+                .success(function (data) {
+                    defer.resolve(data);
+                })
+                .error(function (error) {
+                    defer.reject(error);
+                });
+            return defer.promise;
+        }
+
     }
 })();

@@ -2,13 +2,18 @@
     'use strict';
 
     angular
-        .module('NikApp', ['ngRoute', 'ui.bootstrap', 'nvd3'])
-        .config(Config);
+        .module('NikApp', [
+            'ngRoute',
+            'ngSanitize',
+            'ui.bootstrap',
+            'ui.select',
+            'nvd3'])
+        .run(Run);
 
-    Config.$inject = ['$httpProvider'];
+    Run.$inject = ['$http', '$httpParamSerializerJQLike'];
 
-    function Config($httpProvider) {
-        $httpProvider.interceptors.push('HttpInterceptor');
+    function Run($http, $httpParamSerializerJQLike) {
+        $http.defaults.transformRequest.unshift($httpParamSerializerJQLike);
     }
 })();
 (function() {
@@ -18,9 +23,11 @@
         .module('NikApp')
         .config(NikRouts);
 
-    NikRouts.$inject = ['$routeProvider', '$locationProvider'];
+    NikRouts.$inject = ['$httpProvider', '$routeProvider', '$locationProvider'];
 
-    function NikRouts($routeProvider, $locationProvider) {
+    function NikRouts($httpProvider, $routeProvider, $locationProvider) {
+        $httpProvider.interceptors.push('HttpInterceptor');
+
         $routeProvider
             .when('/', {
                 templateUrl: 'js/app/views/nik-main.html'
@@ -28,12 +35,95 @@
             .when('/portfolio', {
                 templateUrl: 'js/app/views/nik-portfolio.html'
             })
+            .when('/contact', {
+                templateUrl: 'js/app/views/nik-contact.html',
+                controller: 'contactCtrl',
+                controllerAs: 'contact'
+            })
             .otherwise({redirectTo : '/'});
 
         $locationProvider.html5Mode(true);
     }
 })();
 
+(function() {
+    'use strict';
+
+    angular
+        .module('NikApp')
+        .controller('contactCtrl', contactCtrl);
+
+    contactCtrl.$inject = ['NikFactory'];
+
+    function contactCtrl(NikFactory) {
+        var self = this;
+
+        self.toggleNeeds = toggleNeeds;
+        self.submit = submit;
+
+        self.form = {};
+        self.occupations = [
+            {name: 'Business owner'},
+            {name: 'HR manager'},
+            {name: 'Developer'},
+            {name: 'Other'}
+        ];
+        self.needs = [
+            'Permanent job',
+            'Project',
+            'Consultation'
+        ];
+        self.needsChecked = [];
+        self.isSuccess = false;
+        self.result = null;
+
+        function toggleNeeds(need) {
+            var index = self.needsChecked.indexOf(need);
+            if (index > -1) {
+                self.needsChecked.splice(index, 1);
+            } else {
+                self.needsChecked.push(need);
+            }
+        }
+
+        function submit() {
+            self.result = null;
+            if (self.occupation) {
+                self.form.occupation = self.occupation.name;
+            }
+            if (self.needsChecked.length > 0) {
+                self.form.needs = self.needsChecked.join(', ');
+            }
+            NikFactory.sendForm(self.form).then(function(data) {
+                if (data.success) {
+                    self.isSuccess = true;
+                    self.result = 'Your message has been sent successfully!';
+                    resetForm();
+                } else {
+                    self.isSuccess = false;
+                    self.result = data.message;
+                }
+            }).catch(function(error) {
+                self.isSuccess = false;
+                if (error.status == 500) {
+                    self.result = 'Internal server error occurred. Try again later.';
+                } else {
+                    self.result = error;
+                }
+            });
+
+        }
+
+        function resetForm() {
+            self.form = {};
+            self.needsChecked = [];
+            self.occupation = undefined;
+            angular.forEach(self.needs, function(need, index) {
+                self['need'+index] = false;
+            });
+        }
+    }
+})();
 (function() {
     'use strict';
 
@@ -53,7 +143,7 @@
         self.itemEnter = itemEnter;
         self.itemLeave = itemLeave;
 
-        self.ready = false;
+        self.ready = true;
         self.items = [];
         self.mainItems = [];
         self.carousel = [];
@@ -146,6 +236,11 @@
                 color: '#d62728'
             }
         ];
+        self.occupations = [
+            {name: 'Business owner'},
+            {name: 'HR manager'},
+            {name: 'Developer'}
+        ];
 
         init();
 
@@ -169,6 +264,10 @@
             self.ready = true;
         }
 
+        function startLoad() {
+            self.ready = false;
+        }
+
         function print() {
             $window.scrollTo(0, 0);
             if ($location.path() === '/portfolio') {
@@ -180,6 +279,7 @@
         }
 
         function getPortfolioItems() {
+            startLoad();
             return NikFactory.getPorfolio()
                 .then(function(data) {
                     var mainIndex = 0;
@@ -535,7 +635,7 @@
         function request(req) {
             var viewsUrl = /^.*\/app\/.*/;
             if (viewsUrl.test(req.url)) {
-                var version = '?v=1.0';
+                var version = '?v=1.3';
                 req.url = req.url + version;
             }
 
@@ -546,18 +646,19 @@
     }
 })();
 
-(function() {
+(function () {
     'use strict';
 
     angular
         .module('NikApp')
         .factory('NikFactory', NikFactory);
 
-    NikFactory.$inject = ['$http'];
+    NikFactory.$inject = ['$http', '$q'];
 
-    function NikFactory($http) {
+    function NikFactory($http, $q) {
         var service = {
-            getPorfolio: getPorfolio
+            getPorfolio: getPorfolio,
+            sendForm: sendForm
         };
 
         return service;
@@ -575,5 +676,25 @@
                 return error
             }
         }
+
+        function sendForm(params) {
+            var defer = $q.defer();
+            var req = {
+                method: 'POST',
+                url: 'php/form.php',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                data: params
+            };
+
+            $http(req)
+                .success(function (data) {
+                    defer.resolve(data);
+                })
+                .error(function (error) {
+                    defer.reject(error);
+                });
+            return defer.promise;
+        }
+
     }
 })();

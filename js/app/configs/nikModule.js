@@ -2,12 +2,17 @@
     'use strict';
 
     angular
-        .module('NikApp', ['ngRoute', 'ui.bootstrap', 'nvd3'])
-        .config(Config);
+        .module('NikApp', [
+            'ngRoute',
+            'ngSanitize',
+            'ui.bootstrap',
+            'ui.select',
+            'nvd3'])
+        .run(Run);
 
-    Config.$inject = ['$httpProvider'];
+    Run.$inject = ['$http', '$httpParamSerializerJQLike'];
 
-    function Config($httpProvider) {
-        $httpProvider.interceptors.push('HttpInterceptor');
+    function Run($http, $httpParamSerializerJQLike) {
+        $http.defaults.transformRequest.unshift($httpParamSerializerJQLike);
     }
 })();

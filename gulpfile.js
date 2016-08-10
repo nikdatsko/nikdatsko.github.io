@@ -11,7 +11,7 @@ var imagemin = require('gulp-imagemin');
 var less = require('gulp-less');
 var notify = require('gulp-notify');
 var runSequence = require('run-sequence');
-var browserSync = require('browser-sync');
+var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
 var modRewrite  = require('connect-modrewrite');
 //var del = require('del');
@@ -88,12 +88,12 @@ gulp.task('images', function() {
 });
 
 gulp.task('browser-sync', function () {
-    browserSync({
+    browserSync.init({
         server: {
             baseDir: "./",
             middleware: [
                 modRewrite([
-                    '!\\.\\w+$ /index.html [L]'
+                    '^[^\\.]*$ /index.html [L]'
                 ])
             ]
         }
