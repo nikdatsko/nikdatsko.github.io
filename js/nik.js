@@ -104,6 +104,7 @@
                     self.result = data.message;
                 }
             }).catch(function(error) {
+                console.log(error);
                 self.isSuccess = false;
                 if (error.status == 500) {
                     self.result = 'Internal server error occurred. Try again later.';
@@ -638,7 +639,7 @@
         function request(req) {
             var viewsUrl = /^.*\/app\/.*/;
             if (viewsUrl.test(req.url)) {
-                var version = '?v=1.3';
+                var version = '?v=1.4';
                 req.url = req.url + version;
             }
 

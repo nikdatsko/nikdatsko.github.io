@@ -56,6 +56,7 @@
                     self.result = data.message;
                 }
             }).catch(function(error) {
+                console.log(error);
                 self.isSuccess = false;
                 if (error.status == 500) {
                     self.result = 'Internal server error occurred. Try again later.';
