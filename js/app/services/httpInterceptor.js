@@ -18,7 +18,7 @@
         function request(req) {
             var viewsUrl = /^.*\/app\/.*/;
             if (viewsUrl.test(req.url)) {
-                var version = '?v=1.4';
+                var version = '?v=1.5';
                 req.url = req.url + version;
             }
 

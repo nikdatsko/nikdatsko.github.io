@@ -34,7 +34,7 @@
             var req = {
                 method: 'POST',
                 url: 'php/form.php',
-                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                headers: {'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'},
                 data: params
             };
 

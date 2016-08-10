@@ -104,17 +104,19 @@
                     self.result = data.message;
                 }
             }).catch(function(error) {
-                console.log(error);
                 self.isSuccess = false;
                 if(error.status) {
                     if (error.status == 405) {
                         self.result = 'It\'s impossible to send messages from here so if you really want to use this form do it from '+
                         '<a href="http://nik.niklenburg.com/contact" target="_blank">nik.niklenburg.com</a>';
+                    } else if (error.status == -1) {
+                        self.result = 'Message sending has failed. Please, check you Internet connection or try later.';
                     } else {
                         self.result = error.status + '. ' + error.message;
                     }
                 } else {
                     self.result = error;
+                    console.log(error);
                 }
             });
 
@@ -641,7 +643,7 @@
         function request(req) {
             var viewsUrl = /^.*\/app\/.*/;
             if (viewsUrl.test(req.url)) {
-                var version = '?v=1.4';
+                var version = '?v=1.5';
                 req.url = req.url + version;
             }
 
@@ -688,7 +690,7 @@
             var req = {
                 method: 'POST',
                 url: 'php/form.php',
-                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                headers: {'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'},
                 data: params
             };
 
