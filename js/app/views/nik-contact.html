@@ -38,7 +38,7 @@
                         </p>
                         <p class="left" ng-show="contact.result">
                             <span ng-class="{'success': contact.isSuccess, 'fail': !contact.isSuccess}"
-                                  ng-bind="contact.result"></span>
+                                  ng-bind-html="contact.result"></span>
                         </p>
                     </form>
                 </div>
