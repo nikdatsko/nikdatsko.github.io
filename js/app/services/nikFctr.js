@@ -42,11 +42,17 @@
                 .success(function (data) {
                     defer.resolve(data);
                 })
-                .error(function (error) {
-                    defer.reject(error);
+                .error(function (error, status) {
+                    defer.reject(errorConstract(error, status));
                 });
             return defer.promise;
         }
 
+        function errorConstract(error, status) {
+            return status ? {
+                message: error,
+                status: status
+            } : error;
+        }
     }
 })();
