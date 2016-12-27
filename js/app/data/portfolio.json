@@ -1,13 +1,5 @@
 [
   {
-    "logo": "logo_craft.jpg",
-    "screenshot": "craft.jpg",
-    "title": "craft.io",
-    "description": "SVG, CSS3-animation development",
-    "team": "Synergetica",
-    "main": true
-  },
-  {
     "logo": "logo_belldecor.jpg",
     "screenshot": "belldecor.jpg",
     "title": "belldecor.ru",
@@ -15,27 +7,11 @@
     "team": "Retail-Online"
   },
   {
-    "logo": "logo_stylecoalition.jpg",
-    "screenshot": "stylecoalition.jpg",
-    "title": "stylecoalition.com",
-    "description": "AngularJS development",
-    "team": "Synergetica",
-    "main": true
-  },
-  {
     "logo": "logo_ro.jpg",
     "screenshot": "ro.jpg",
     "title": "retail-online.ru/seo_special",
     "description": "Front-end development",
     "team": "Retail-Online"
-  },
-  {
-    "logo": "logo_washe.jpg",
-    "screenshot": "washe.jpg",
-    "title": "thewasheapp.com",
-    "description": "Javascript development",
-    "team": "Synergetica",
-    "main": true
   },
   {
     "logo": "logo_videi.jpg",
