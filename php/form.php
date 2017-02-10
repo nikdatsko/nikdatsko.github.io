@@ -18,7 +18,7 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message']))
     $mail->From = $_POST['email'];
     $mail->FromName = $_POST['name'];
     $mail->AddAddress('mydatsko@gmail.com'); //recipient
-    $mail->Subject = ('Message from the resume.');
+    $mail->Subject = ('Niklenburg_frontend_developer.');
     $mail->Body = "Name: " . $_POST['name'];
 
     if (isset($_POST['occupation'])) {

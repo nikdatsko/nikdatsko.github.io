@@ -6,12 +6,13 @@
         <div class="inner">
             <div class="inner2">
                 <div class="padding">
-                    <form class="contact-form" ng-submit="contact.submit()">
+                    <form class="contact-form" name="contactForm"
+                          ng-submit="contact.submit()" novalidate>
                         <p>
-                            <input ng-model="contact.form.name" type="text" placeholder="Name">
+                            <input ng-model="contact.form.name" type="text" placeholder="Name" required>
                         </p>
                         <p>
-                            <input ng-model="contact.form.email" type="email" placeholder="Email">
+                            <input ng-model="contact.form.email" type="email" placeholder="Email" required>
                         </p>
                         <p>
                             <ui-select ng-model="contact.occupation">
@@ -27,11 +28,12 @@
                         <p class="checkbox" ng-repeat="need in contact.needs track by $index">
                             <input id="need_{{$index}}" type="checkbox"
                                    ng-model="contact['need' + $index]"
+                                   ng-disabled="contactForm.$invalid"
                                    ng-change="contact.toggleNeeds(need)">
                             <label for="need_{{$index}}">{{need}}</label>
                         </p>
                         <p>
-                            <textarea ng-model="contact.form.message" placeholder="Type your message..."></textarea>
+                            <textarea ng-model="contact.form.message" placeholder="Type your message..." required></textarea>
                         </p>
                         <p class="right">
                             <input type="submit" value="Send">

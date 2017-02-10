@@ -46,6 +46,12 @@
             if (self.needsChecked.length > 0) {
                 self.form.needs = self.needsChecked.join(', ');
             }
+            if (isFormValid()) {
+                sendForm();
+            }
+        }
+
+        function sendForm() {
             NikFactory.sendForm(self.form).then(function(data) {
                 if (data.success) {
                     self.isSuccess = true;
@@ -68,10 +74,8 @@
                     }
                 } else {
                     self.result = error;
-                    console.log(error);
                 }
             });
-
         }
 
         function resetForm() {
@@ -81,6 +85,10 @@
             angular.forEach(self.needs, function(need, index) {
                 self['need'+index] = false;
             });
+        }
+
+        function isFormValid() {
+
         }
     }
 })();
