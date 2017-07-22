@@ -136,7 +136,7 @@
         }
 
         function isFormValid() {
-
+            return !!self.form;
         }
     }
 })();
