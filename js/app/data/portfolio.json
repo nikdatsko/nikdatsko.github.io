@@ -1,5 +1,21 @@
 [
   {
+    "logo": "logo_craft.jpg",
+    "screenshot": "craft.jpg",
+    "title": "projects.niklenburg.com/craft/",
+    "description": "Front-end development",
+    "team": "Synergetica",
+    "main": true
+  },
+  {
+    "logo": "logo_reali.jpg",
+    "screenshot": "reali.jpg",
+    "title": "projects.niklenburg.com/reali/",
+    "description": "Front-end development",
+    "team": "Synergetica",
+    "main": true
+  },
+  {
     "logo": "logo_belldecor.jpg",
     "screenshot": "belldecor.jpg",
     "title": "belldecor.ru",
@@ -173,8 +189,7 @@
     "screenshot": "avtogid.jpg",
     "title": "projects.niklenburg.com/avtogid",
     "description": "Front-end development",
-    "team": "Softformula",
-    "main": true
+    "team": "Softformula"
   },
   {
     "logo": "logo_hizmet.jpg",
@@ -193,8 +208,7 @@
     "logo": "logo_germida.jpg",
     "screenshot": "germida.jpg",
     "title": "germida.ru",
-    "description": "Wordpress & woocommerce install and configuration",
-    "main": true
+    "description": "Wordpress & woocommerce install and configuration"
   },
   {
     "logo": "logo_softformula.jpg",
