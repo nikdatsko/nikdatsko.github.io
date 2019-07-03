@@ -1,0 +1,233 @@
+// Colors
+$blue: #006295;
+$lightblue: #9be1fb;
+$lighterblue: #c5effd;
+$red: #bd2031;
+$black: #231f20;
+$gray-bg: #f1f1f1;
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: 'Muli', sans-serif;
+  background: $gray-bg;
+  color: $black;
+  font-size: 14px;
+  overflow-y: scroll !important;
+  @include transition(0.3s, 0.4s, opacity,  ease-in);
+}
+/**********************************************************
+  Common classes
+***********************************************************/
+.red {
+  color: $red;
+}
+.blue {
+  color: $blue;
+}
+.lightblue {
+  color: $lightblue;
+}
+.lighterblue {
+  color: $lighterblue;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.hidden {
+  display: none;
+}
+.table {
+  display: table;
+}
+.tr {
+  display: table-row;
+}
+.td,
+.th {
+  display: table-cell;
+}
+.only4print {
+  display: none;
+}
+/***********************************************************
+  Global
+***********************************************************/
+p {
+  line-height: 150%;
+  margin-bottom: 1em;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+h1 {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 3em;
+  margin-bottom: 0.6em;
+  text-shadow: -1px 1px 0px #fff;
+}
+h2 {
+  text-shadow: 1px 0 0 #231f20;
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+h3 {
+  text-shadow: 1px 0 0 #231f20;
+  font-size: 1.5em;
+  margin-bottom: 0.1em;
+}
+h4 {
+  font-weight: normal;
+  font-style: italic;
+  font-weight: 1em;
+  margin-bottom: 1.2em;
+}
+a {
+  cursor: pointer;
+  @extend .blue;
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+.placeholder {
+  color: #aaa;
+}
+::-webkit-input-placeholder {
+  @extend .placeholder;
+}
+:-moz-placeholder {
+  @extend .placeholder;
+}
+::-moz-placeholder {
+  @extend .placeholder;
+}
+:-ms-input-placeholder {
+  @extend .placeholder;
+}
+input:not([type]),
+input[type='color'],
+input[type='email'],
+input[type='number'],
+input[type='password'],
+input[type='tel'],
+input[type='url'],
+input[type='text'],
+input[type='search'],
+.ui-select-match,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px #eee solid;
+  @include box-sizing();
+  font: inherit;
+  line-height: 1;
+  @include transition();
+  &:hover,
+  &:focus {
+    border-color: #231f20;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+textarea {
+  height: 10em;
+  resize: vertical;
+}
+input[type='radio'],
+input[type='checkbox'] {
+  position: absolute;
+  opacity: 0;
+  & + label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    @include noselect();
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      @include box-sizing();
+      @include transition();
+    }
+    &:before {
+      top: -2px;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border: 1px #eee solid;
+    }
+    &:after {
+      top: 5px;
+      left: 5px;
+      width: 10px;
+      height: 5px;
+      border-left: 2px $blue solid;
+      border-bottom: 2px $blue solid;
+      @include rotatescale(0, 0, -45deg);
+    }
+    &:hover {
+      &:before {
+        border-color: $black;
+      }
+    }
+  }
+  &:focus {
+    & + label {
+      &:before {
+        border-color: $black;
+      }
+    }
+  }
+  &:checked {
+    & + label {
+      &:after {
+        @include rotatescale(1, 1, -45deg);
+      }
+    }
+  }
+}
+input[type='submit'],
+input[type='button'] {
+  display: inline-block;
+  @include box-sizing();
+  width: 150px;
+  max-width: 100%;
+  padding: 12px 0 10px;
+  border-radius: 2px;
+  background: $lightblue;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-shadow: 1px 0 0 $black;
+  @include box-shadow(0 1px 2px #ccc);
+  @include transition();
+  &:hover {
+    @include box-shadow(0 2px 5px #ccc);
+  }
+  &:active {
+    @include box-shadow(0 1px 1px #ccc);
+    @include transition(0.1s);
+  }
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+figure img {
+  max-width: 100%;
+}
+/*_________________________________________________________*/
+
+.wrapper {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}

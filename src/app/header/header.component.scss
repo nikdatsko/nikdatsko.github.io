@@ -1,0 +1,71 @@
+@import '~src/assets/styles/mixins';
+
+header {
+  background: #fff;
+  border-bottom: 1px #eeeeee solid;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  top: 0;
+  height: 140px;
+  .wrapper {
+    position: relative;
+    span {
+      position: absolute;
+    }
+  }
+}
+
+.name_h {
+  color: #231f20;
+  span {
+    position: relative;
+    text-shadow: 1px 0 0 #231f20;
+    font-size: 3.5em;
+  }
+}
+.contacts_h {
+  span {
+    font-size: 1.2em;
+    line-height: 20px;
+  }
+}
+.name {
+  top: 20px;
+  left: 10px;
+}
+.familyname {
+  top: 75px;
+  left: 10px;
+}
+.tel_h {
+  top: 20px;
+  right: 10px;
+}
+.email_h {
+  top: 60px;
+  right: 10px;
+}
+.portfolio_h {
+  top: 100px;
+  right: 10px;
+}
+.skype_h {
+  padding-left: 25px;
+  height: 20px;
+  top: 100px;
+  right: 60px;
+}
+.print_h {
+  position: absolute;
+  top: 95px;
+  right: 10px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  &:hover {
+    rect {
+      fill: #231f20;
+    }
+  }
+}

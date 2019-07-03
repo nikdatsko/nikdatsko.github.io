@@ -1,0 +1,15 @@
+@import '~src/assets/styles/mixins';
+
+$footerHeight: 132px;
+.outer {
+  padding-top: 140px;
+  overflow: hidden;
+  min-height: 100%;
+  margin-bottom: -$footerHeight;
+  @include box-sizing();
+  &:after {
+    content: '';
+    display: block;
+    height: $footerHeight;
+  }
+}
