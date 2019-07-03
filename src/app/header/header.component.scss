@@ -14,6 +14,32 @@ header {
       position: absolute;
     }
   }
+
+  &.scrolled {
+    @include translate3d(0, -75px);
+
+    .name {
+      @include translate3d(0, 65px);
+    }
+    .familyname {
+      @include translate3d(90px, 10px);
+    }
+    .tel_h {
+      @include translate3d(-285px, 80px);
+    }
+    .email_h {
+      @include translate3d(-90px, 40px);
+    }
+  }
+}
+
+header,
+.name,
+.familyname,
+.tel_h,
+.email_h {
+  @include transition();
+  -webkit-backface-visibility: hidden;
 }
 
 .name_h {

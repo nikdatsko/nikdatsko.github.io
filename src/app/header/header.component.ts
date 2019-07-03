@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
+  scrolled = false;
 
-  constructor() { }
-
-  ngOnInit() {
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll($event) {
+    this.scrolled = window.pageYOffset > 10;
   }
-
 }
