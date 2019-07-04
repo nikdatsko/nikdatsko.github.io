@@ -1,24 +1,31 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { Router, NavigationEnd } from '@angular/router';
+import { provideMockStore } from '@ngrx/store/testing';
+import { Store } from '@ngrx/store';
 import { FooterComponent } from './footer.component';
 import { of } from 'rxjs';
-
-class MockRouter {
-  events = of(
-    new NavigationEnd(0, 'http://localhost:4200/', 'http://localhost:4200/')
-  );
-}
 
 describe('FooterComponent', () => {
   let component: FooterComponent;
   let fixture: ComponentFixture<FooterComponent>;
+  let mockStore;
+
+  const initialState = {
+    router: {
+      state: {
+        url: ''
+      }
+    }
+  };
 
   beforeEach(
     async(() => {
       TestBed.configureTestingModule({
         declarations: [FooterComponent],
-        providers: [{ provide: Router, useClass: MockRouter }]
+        providers: [provideMockStore({ initialState })]
       }).compileComponents();
+
+      mockStore = TestBed.get(Store);
+      spyOn(mockStore, 'pipe').and.callThrough();
     })
   );
 

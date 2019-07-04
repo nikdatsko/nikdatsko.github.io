@@ -1,5 +1,6 @@
+import { select, Store } from '@ngrx/store';
 import { Component } from '@angular/core';
-import { Router, Event, NavigationEnd } from '@angular/router';
+import * as fromStore from '../store';
 
 @Component({
   selector: 'app-footer',
@@ -7,12 +8,6 @@ import { Router, Event, NavigationEnd } from '@angular/router';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-  footerWord = 'resumé';
-  constructor(router: Router) {
-    router.events.subscribe((event: Event) => {
-      if (event instanceof NavigationEnd) {
-        this.footerWord = event.url === '/portfolio' ? 'portfolio' : 'resumé';
-      }
-    });
-  }
+  readonly footerWordStream = this.store.pipe(select(fromStore.getFooterWord));
+  constructor(private store: Store<fromStore.State>) {}
 }
