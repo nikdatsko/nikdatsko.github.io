@@ -1,0 +1,79 @@
+@import '~src/assets/styles/mixins';
+aside {
+  width: 25%; /*240/960*/
+  float: left;
+  padding: 10px 0;
+  text-align: right;
+  h1 {
+    line-height: 1.1em;
+  }
+}
+article {
+  width: 75%; /*720/960*/
+  float: right;
+}
+section {
+  clear: both;
+  @include ca();
+}
+.inner {
+  box-shadow: 0 0 5px #ccc;
+  margin: 10px 1.3888888888888888888888888888889%; /*10/720*/
+  padding: 5px 0.69444444444444444444444444444444%; /*5/720*/
+  &.first {
+    box-shadow: none;
+  }
+  .inner2 {
+    background: #fff;
+  }
+}
+.padding {
+  padding: 10px;
+  ul {
+    list-style-type: disc;
+    li {
+      line-height: 150%;
+    }
+  }
+}
+@media all and (max-width: 1024px) {
+  aside {
+    width: 30%;
+  }
+  article {
+    width: 70%;
+  }
+}
+@media all and (max-width: 767px) {
+  section {
+    aside {
+      width: 100%;
+      text-align: center;
+      h1 {
+        margin-bottom: 0;
+      }
+    }
+    article {
+      width: 100%;
+    }
+  }
+}
+@media all and (max-width: 479px) {
+  .top_section {
+    aside {
+      width: 100%;
+      figure {
+        float: left;
+        width: 25%;
+      }
+      h1 {
+        width: 72.916666666666666666666666666667%;
+        float: right;
+        text-align: left;
+      }
+    }
+    article {
+      width: 100%;
+    }
+  }
+}

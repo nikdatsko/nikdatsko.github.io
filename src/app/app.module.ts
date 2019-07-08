@@ -1,6 +1,5 @@
 import { environment } from '../environments/environment';
 import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MetaReducer, StoreModule } from '@ngrx/store';
@@ -12,6 +11,7 @@ import {
 import { storeFreeze } from 'ngrx-store-freeze';
 
 import { AppRoutingModule } from './app-routing.module';
+import { SharedModule } from './shared/shared.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -25,7 +25,7 @@ export const metaReducers: MetaReducer<any>[] = !environment.production
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent],
   imports: [
-    CommonModule,
+    SharedModule,
     FormsModule,
     BrowserModule,
     AppRoutingModule,

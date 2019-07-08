@@ -1,6 +1,7 @@
 @import '~src/assets/styles/mixins';
 
-header {
+:host {
+  display: block;
   background: #fff;
   border-bottom: 1px #eeeeee solid;
   position: fixed;
@@ -15,7 +16,7 @@ header {
     }
   }
 
-  &.scrolled {
+  .scrolled {
     @include translate3d(0, -75px);
 
     .name {
