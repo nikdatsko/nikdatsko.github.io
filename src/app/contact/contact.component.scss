@@ -1,0 +1,27 @@
+@import '~src/assets/styles/mixins';
+@import '~src/assets/styles/variables';
+.contact-form {
+  @include ca();
+}
+.checkbox {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 1em;
+}
+.result {
+  color: $green;
+
+  &-fail {
+    color: $red;
+    a {
+      color: inherit;
+    }
+  }
+}
+.left {
+  width: 75%;
+}
+.right {
+  width: 25%;
+  text-align: right;
+}

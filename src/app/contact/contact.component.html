@@ -1,3 +1,34 @@
 <app-section sectionTitle="Contact me">
-  <p>contact works!</p>
+  <form [formGroup]="contactForm" class="contact-form" [class.contact-form-submitted]="isSubmitted" (ngSubmit)="onSubmit()">
+    <p>
+      <input formControlName="name" type="text" placeholder="Name">
+    </p>
+    <p>
+      <input formControlName="email" type="email" placeholder="Email">
+    </p>
+    <p>
+      <select formControlName="occupation">
+        <option value="" disabled selected hidden>Your occupation...</option>
+        <option *ngFor="let occupation of occupations" [value]="occupation">
+          {{occupation}}
+        </option>
+      </select>
+    </p>
+    <p>Why do you need me?</p>
+    <p>
+      <span formArrayName="needs" class="checkbox" *ngFor="let need of needs; let i = index">
+        <input [formControlName]="i" id="need_{{i}}" type="checkbox">
+        <label for="need_{{i}}">{{need}}</label>
+      </span>
+    </p>
+    <p>
+      <textarea formControlName="message" placeholder="Type your message..."></textarea>
+    </p>
+    <p class="right">
+      <input type="submit" value="Send" [disabled]="contactForm.invalid">
+    </p>
+    <p class="left" *ngIf="!!result">
+      <span class="result" [class.result-fail]="isFail" [innerHTML]="result"></span>
+    </p>
+  </form>
 </app-section>

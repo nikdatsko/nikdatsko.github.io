@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import * as emailjs from 'emailjs-com';
 
 @Component({
@@ -7,25 +8,50 @@ import * as emailjs from 'emailjs-com';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-  name;
-  email;
-  message;
+  contactForm: FormGroup;
+  isSubmitted: boolean;
+  isFail: boolean;
+  occupations: string[] = [
+    'Business owner',
+    'HR manager',
+    'Developer',
+    'Other'
+  ];
+  needs: string[] = ['Permanent job', 'Project', 'Consultation'];
+  result: string = null;
 
-  constructor() {}
+  constructor(private fb: FormBuilder) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.setForm();
+  }
 
   onSubmit() {
-    const templateParams = {
-      reply_to: this.email,
-      from_name: this.name,
-      message_html: this.message
+    if (this.contactForm.invalid) {
+      return;
+    }
+    const contactFormValue = {
+      ...this.contactForm.value,
+      needs: this.convertToValue('needs')
     };
-    emailjs.send(
-      'gmail',
-      'template_XESJrrPB',
-      templateParams,
-      'user_epLRYw7lhfXeRFIyhhy04'
-    );
+    console.log(contactFormValue);
+    this.result = 'Your message has been sent successfully!';
+    this.contactForm.reset();
+  }
+
+  private convertToValue(key: string) {
+    return this.contactForm.value[key]
+      .map((x, i) => x && this[key][i])
+      .filter(x => !!x);
+  }
+
+  private setForm() {
+    this.contactForm = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', Validators.email],
+      occupation: ['', Validators.required],
+      needs: this.fb.array(this.needs.map(x => !1)),
+      message: ['', Validators.required]
+    });
   }
 }
