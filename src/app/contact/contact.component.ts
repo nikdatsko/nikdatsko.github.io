@@ -1,13 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import * as emailjs from 'emailjs-com';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
+import { ContactService } from './contact.service';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent implements OnInit, OnDestroy {
   contactForm: FormGroup;
   isSubmitted: boolean;
   isFail: boolean;
@@ -15,34 +17,51 @@ export class ContactComponent implements OnInit {
     'Business owner',
     'HR manager',
     'Developer',
-    'Other'
+    'Friend'
   ];
   needs: string[] = ['Permanent job', 'Project', 'Consultation'];
   result: string = null;
+  private unsubscribeStream = new Subject();
 
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    private fb: FormBuilder,
+    private contactService: ContactService
+  ) {}
 
   ngOnInit() {
     this.setForm();
+    this.contactService
+      .getResult()
+      .pipe(takeUntil(this.unsubscribeStream))
+      .subscribe(({ isFail, message }) => {
+        this.isSubmitted = false;
+        this.isFail = isFail;
+        this.result = message;
+        if (!isFail) {
+          this.contactForm.reset();
+        }
+      });
+  }
+
+  ngOnDestroy() {
+    this.unsubscribeStream.next();
   }
 
   onSubmit() {
     if (this.contactForm.invalid) {
       return;
     }
+    this.isSubmitted = true;
+    this.result = null;
+    const needs = this.contactForm.value.needs
+      .map((x, i) => x && this.needs[i])
+      .filter(x => !!x)
+      .join(', ');
     const contactFormValue = {
       ...this.contactForm.value,
-      needs: this.convertToValue('needs')
+      needs: needs || 'unspecified reason'
     };
-    console.log(contactFormValue);
-    this.result = 'Your message has been sent successfully!';
-    this.contactForm.reset();
-  }
-
-  private convertToValue(key: string) {
-    return this.contactForm.value[key]
-      .map((x, i) => x && this[key][i])
-      .filter(x => !!x);
+    this.contactService.submitContactForm(contactFormValue);
   }
 
   private setForm() {
