@@ -1,16 +1,14 @@
-<section>
-  <div class="wrapper">
-    <aside>
-      <h1>{{sectionTitle}}</h1>
-    </aside>
-    <article class="{{className}}">
-      <div class="inner">
-        <div class="inner2">
-          <div class="padding">
-            <ng-content></ng-content>
-          </div>
+<section class="wrapper {{className}}">
+  <aside>
+    <ng-content select="[aside]"></ng-content>
+  </aside>
+  <article>
+    <div class="inner">
+      <div class="inner2">
+        <div class="padding">
+          <ng-content select="[article]"></ng-content>
         </div>
       </div>
-    </article>
-  </div>
+    </div>
+  </article>
 </section>

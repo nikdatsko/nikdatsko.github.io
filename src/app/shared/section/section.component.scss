@@ -12,19 +12,24 @@ article {
   width: 75%; /*720/960*/
   float: right;
 }
-section {
-  clear: both;
-  @include ca();
-}
 .inner {
   box-shadow: 0 0 5px #ccc;
   margin: 10px 1.3888888888888888888888888888889%; /*10/720*/
   padding: 5px 0.69444444444444444444444444444444%; /*5/720*/
-  &.first {
-    box-shadow: none;
-  }
   .inner2 {
     background: #fff;
+  }
+
+  .top_section & {
+    box-shadow: none;
+
+    .inner2 {
+      background: transparent;
+    }
+
+    .padding {
+      padding: 0;
+    }
   }
 }
 .padding {
