@@ -1,17 +1,28 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { of } from 'rxjs';
 
 import { PortfolioComponent } from './portfolio.component';
+import { PortfolioService } from './portfolio.service';
 
 describe('PortfolioComponent', () => {
   let component: PortfolioComponent;
   let fixture: ComponentFixture<PortfolioComponent>;
+  let mockPortfolioService;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ PortfolioComponent ]
+  beforeEach(
+    async(() => {
+      mockPortfolioService = jasmine.createSpyObj('PortfolioService', [
+        'getProjects'
+      ]);
+      mockPortfolioService.getProjects.and.returnValue(of([]));
+      TestBed.configureTestingModule({
+        declarations: [PortfolioComponent],
+        providers: [
+          { provide: PortfolioService, useValue: mockPortfolioService }
+        ]
+      }).compileComponents();
     })
-    .compileComponents();
-  }));
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(PortfolioComponent);

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PortfolioService, Project } from './portfolio.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent implements OnInit {
+  projects: Project[] = [];
 
-  constructor() { }
+  constructor(private portfolioService: PortfolioService) {}
 
   ngOnInit() {
+    this.portfolioService
+      .getProjects()
+      .subscribe(data => (this.projects = data));
   }
 
+  onImgLoad(item: Project) {
+    item.loaded = true;
+  }
+
+  onImgError(item: Project) {
+    item.fail = true;
+  }
 }
