@@ -11,6 +11,7 @@ header {
   height: 140px;
   .wrapper {
     position: relative;
+    height: 100%;
     span {
       position: absolute;
     }
@@ -19,6 +20,9 @@ header {
   &.scrolled {
     @include translate3d(0, -75px);
 
+    .image {
+      @include translatescale(0, 37px, 0, 0.5, 0.5);
+    }
     .name {
       @include translate3d(0, 65px);
     }
@@ -35,6 +39,7 @@ header {
 }
 
 header,
+.image,
 .name,
 .familyname,
 .tel_h,
@@ -57,13 +62,23 @@ header,
     line-height: 20px;
   }
 }
+.image {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+
+  img {
+    max-height: 100%;
+  }
+}
 .name {
   top: 20px;
-  left: 10px;
+  left: 110px;
 }
 .familyname {
   top: 75px;
-  left: 10px;
+  left: 110px;
 }
 .tel_h {
   top: 20px;

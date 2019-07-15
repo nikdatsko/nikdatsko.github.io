@@ -1,0 +1,102 @@
+[
+  {
+    "role": "Senior software engineer",
+    "company": "EPAM",
+    "location": "Prague, Czech Republic",
+    "from_date": "05/2017",
+    "to_date": null,
+    "stack": [
+      "Angular",
+      "TypeScript",
+      "SCSS",
+      "CI/CD",
+      "Unit-testing",
+      "Redux",
+      "Rx.js",
+      "D3.js",
+      "ag-grid",
+      "Responsive layout",
+      "Using IntelliJ IDEA, GitLab, JIRA, Angular-cli, TeamCity, Karma/jasmine"
+    ]
+  },
+  {
+    "role": "Front-end developer",
+    "company": "Synergetica",
+    "location": "Remote position. Kiev, Ukraine",
+    "from_date": "06/2015",
+    "to_date": "05/2017",
+    "stack": [
+      "HTML5, CSS3, JS",
+      "AngularJS development",
+      "CSS animations",
+      "SVG illustrations",
+      "Django templates",
+      "HTML to PDF templates coding",
+      "Responsive design development",
+      "Using PyCharm, GitHub, GitLab, Gulp"
+    ]
+  },
+  {
+    "role": "Freelance web-developer",
+    "company": "Incredible journey",
+    "location": "Latin America",
+    "from_date": "01/2015",
+    "to_date": "06/2015",
+    "stack": [
+      "PSD to HTML, CSS, JS",
+      "WordPress, Drupal theming",
+      "AngularJS learning",
+      "Creating a personal travel blog niklenburg.com",
+      "Using WebStorm, GitHub"
+    ]
+  },
+  {
+    "role": "Front-end developer",
+    "company": "Retail-Online",
+    "location": "St. Petersburg, Russia",
+    "from_date": "09/2013",
+    "to_date": "01/2015",
+    "stack": [
+      "HTML coding using HTML5 and XHTML",
+      "LESS/CSS styling",
+      "JavaScript effects implementation",
+      "jQuery",
+      "PHP programming for CMSs",
+      "Working with WordPress, OpenCart, Joomla, Smarty PHP Template Engine and other",
+      "Cross-browser and responsive coding",
+      "HTML newsletters",
+      "Search Engine Optimization of the code",
+      "Using Adobe Dreamweaver, Photoshop, GRUNT, Crunch!, Notepad++"
+    ]
+  },
+  {
+    "role": "Web-developer, administrator",
+    "company": "Ludilangues",
+    "location": "Strasbourg, France",
+    "from_date": "09/2012",
+    "to_date": "09/2013",
+    "stack": [
+      "Creating web-sites from scratch",
+      "Design of web-sites",
+      "HTML coding",
+      "CSS styling",
+      "PHP programming",
+      "jQuery event handling",
+      "Installation and configuration of software",
+      "Photo editing in Photoshop",
+      "Video editing  and creating video tutorials in Camtasia Studio"
+    ]
+  },
+  {
+    "role": "Freelance web-developer",
+    "company": null,
+    "location": "Gdansk, Poland",
+    "from_date": "01/2012",
+    "to_date": "09/2012",
+    "stack": [
+      "Creating simple HTML based web-sites",
+      "Learning CSS and JavaScript",
+      "Installing and configuring WordPress sites"
+    ]
+  }
+]

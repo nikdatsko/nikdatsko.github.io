@@ -1,3 +1,4 @@
+import { HomeService, Place } from './home.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  places: Place[] = [];
 
-  constructor() { }
+  constructor(private homeService: HomeService) {}
 
   ngOnInit() {
+    this.homeService.getExperience().subscribe(data => (this.places = data));
   }
-
 }

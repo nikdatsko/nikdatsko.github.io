@@ -1,0 +1,29 @@
+:host {
+  display: block;
+  margin-bottom: 20px;
+  clear: both;
+}
+
+p,
+li {
+  line-height: 150%;
+}
+ul {
+  list-style-type: disc;
+}
+
+.date {
+  float: right;
+  margin: 10px;
+  div {
+    padding: 10px;
+    width: 60px;
+    text-align: center;
+    &.top {
+      background: #9be1fb;
+    }
+    &.bottom {
+      background: #c5effd;
+    }
+  }
+}

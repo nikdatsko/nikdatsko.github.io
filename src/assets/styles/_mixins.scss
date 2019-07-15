@@ -231,6 +231,13 @@
   -o-transform: rotate($angle) scale($scaleX, $scaleY);
   transform: rotate($angle) scale($scaleX, $scaleY);
 }
+@mixin translatescale($x: 0, $y: 0, $z: 0, $scaleX: 1, $scaleY: 1) {
+  -webkit-transform: translate3d($x, $y, $z) scale($scaleX, $scaleY);
+  -moz-transform: translate3d($x, $y, $z) scale($scaleX, $scaleY);
+  -ms-transform: translate3d($x, $y, $z) scale($scaleX, $scaleY);
+  -o-transform: translate3d($x, $y, $z) scale($scaleX, $scaleY);
+  transform: translate3d($x, $y, $z) scale($scaleX, $scaleY);
+}
 @mixin roll($perspective: 900px, $rotateY: 90deg) {
   -webkit-transform: perspective($perspective) rotateY($rotateY);
   -moz-transform: perspective($perspective) rotateY($rotateY);
