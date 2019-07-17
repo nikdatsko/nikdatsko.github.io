@@ -19,18 +19,6 @@ article {
   .inner2 {
     background: #fff;
   }
-
-  .top_section & {
-    box-shadow: none;
-
-    .inner2 {
-      background: transparent;
-    }
-
-    .padding {
-      padding: 0;
-    }
-  }
 }
 .padding {
   padding: 10px;
@@ -63,22 +51,39 @@ article {
     }
   }
 }
-@media all and (max-width: 479px) {
+
+@media print {
   .top_section {
+    // margin-top: -50px;
+  }
+  section {
     aside {
-      width: 100%;
-      figure {
-        float: left;
-        width: 25%;
-      }
+      width: 30%;
+      text-align: right;
       h1 {
-        width: 72.916666666666666666666666666667%;
-        float: right;
-        text-align: left;
+        font-size: 2.6em;
+        margin-top: 10px;
       }
     }
     article {
-      width: 100%;
+      width: 70%;
+    }
+  }
+  .inner {
+    box-shadow: none;
+    border-left: 1px #eeeeee solid;
+  }
+  .about {
+    .inner,
+    .padding {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    article {
+      p {
+        line-height: 130%;
+        margin-bottom: 0.6em;
+      }
     }
   }
 }

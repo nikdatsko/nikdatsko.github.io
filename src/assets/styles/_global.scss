@@ -235,3 +235,23 @@ figure img {
   margin: 0 auto;
   @include ca();
 }
+
+@media print {
+  .not4print {
+    display: none;
+  }
+  .only4print {
+    display: block;
+  }
+  body {
+    font-family: serif;
+    background: #fff;
+  }
+  .no-pagebreak {
+    display: block;
+    page-break-inside: avoid;
+  }
+  .page-break {
+    page-break-before: always;
+  }
+}

@@ -7,3 +7,9 @@ footer {
   background: #fff;
   @include box-sizing();
 }
+
+@media print {
+  footer {
+    display: none;
+  }
+}

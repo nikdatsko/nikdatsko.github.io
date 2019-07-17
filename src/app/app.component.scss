@@ -13,3 +13,12 @@ $footerHeight: 132px;
     height: $footerHeight;
   }
 }
+
+@media print {
+  .outer {
+    padding-top: 0;
+    &:after {
+      display: none;
+    }
+  }
+}

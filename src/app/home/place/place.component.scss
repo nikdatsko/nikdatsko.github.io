@@ -27,3 +27,20 @@ ul {
     }
   }
 }
+
+@media print {
+  .date div {
+    &.top,
+    &.bottom {
+      border: 1px #ccc solid;
+    }
+    &.top {
+      border-bottom: none;
+    }
+  }
+
+  p,
+  li {
+    line-height: 130%;
+  }
+}
