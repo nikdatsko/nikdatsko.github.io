@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Place } from '../home.service';
 
 @Component({
@@ -6,10 +6,6 @@ import { Place } from '../home.service';
   templateUrl: './place.component.html',
   styleUrls: ['./place.component.scss']
 })
-export class PlaceComponent implements OnInit {
+export class PlaceComponent {
   @Input() place: Place;
-
-  constructor() {}
-
-  ngOnInit() {}
 }

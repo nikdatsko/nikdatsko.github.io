@@ -5,18 +5,14 @@
     "location": "Prague, Czech Republic",
     "from_date": "05/2017",
     "to_date": null,
-    "stack": [
-      "Angular",
-      "TypeScript",
-      "SCSS",
-      "CI/CD",
-      "Unit-testing",
-      "Redux",
-      "Rx.js",
-      "D3.js",
-      "ag-grid",
-      "Responsive layout",
-      "Using IntelliJ IDEA, GitLab, JIRA, Angular-cli, TeamCity, Karma/jasmine"
+    "duties": [
+      "Working on large Angular applications",
+      "Creating new applications, reusable components and libraries",
+      "Setting up continuous integration and delivery",
+      "Making sure business requirements are met and the project is easily maintainable with the possibility to continuously add new features and improvements",
+      "Integrating application state management",
+      "Covering code with unit-tests",
+      "Leading development of a project connecting users, designers, front and back ends"
     ]
   },
   {
@@ -25,15 +21,13 @@
     "location": "Remote position. Kiev, Ukraine",
     "from_date": "06/2015",
     "to_date": "05/2017",
-    "stack": [
-      "HTML5, CSS3, JS",
-      "AngularJS development",
-      "CSS animations",
-      "SVG illustrations",
-      "Django templates",
+    "duties": [
+      "Migrating from jQuery multiple-page application to AngularJS single-page application",
+      "Developing interactive and dynemic corporate websites",
+      "Working on data visualisation",
       "HTML to PDF templates coding",
       "Responsive design development",
-      "Using PyCharm, GitHub, GitLab, Gulp"
+      "Working in a very well set SCRUM team"
     ]
   },
   {
@@ -42,12 +36,10 @@
     "location": "Latin America",
     "from_date": "01/2015",
     "to_date": "06/2015",
-    "stack": [
-      "PSD to HTML, CSS, JS",
+    "duties": [
+      "Converting PSD to HTML, CSS, JS",
       "WordPress, Drupal theming",
-      "AngularJS learning",
-      "Creating a personal travel blog niklenburg.com",
-      "Using WebStorm, GitHub"
+      "Creating a personal travel blog niklenburg.com"
     ]
   },
   {
@@ -56,17 +48,11 @@
     "location": "St. Petersburg, Russia",
     "from_date": "09/2013",
     "to_date": "01/2015",
-    "stack": [
-      "HTML coding using HTML5 and XHTML",
-      "LESS/CSS styling",
-      "JavaScript effects implementation",
-      "jQuery",
-      "PHP programming for CMSs",
+    "duties": [
+      "Developing front end for corporate web sites, e-shops, landing pages",
       "Working with WordPress, OpenCart, Joomla, Smarty PHP Template Engine and other",
-      "Cross-browser and responsive coding",
-      "HTML newsletters",
-      "Search Engine Optimization of the code",
-      "Using Adobe Dreamweaver, Photoshop, GRUNT, Crunch!, Notepad++"
+      "Coding HTML newsletters",
+      "Search Engine Optimization of the code"
     ]
   },
   {
@@ -75,16 +61,12 @@
     "location": "Strasbourg, France",
     "from_date": "09/2012",
     "to_date": "09/2013",
-    "stack": [
-      "Creating web-sites from scratch",
-      "Design of web-sites",
-      "HTML coding",
-      "CSS styling",
-      "PHP programming",
+    "duties": [
+      "Creating web-sites from scratch: design, html/css layout, PHP templating",
       "jQuery event handling",
       "Installation and configuration of software",
       "Photo editing in Photoshop",
-      "Video editing  and creating video tutorials in Camtasia Studio"
+      "Video editing and creating video tutorials"
     ]
   },
   {
@@ -93,8 +75,8 @@
     "location": "Gdansk, Poland",
     "from_date": "01/2012",
     "to_date": "09/2012",
-    "stack": [
-      "Creating simple HTML based web-sites",
+    "duties": [
+      "Creating simple backendless web-sites",
       "Learning CSS and JavaScript",
       "Installing and configuring WordPress sites"
     ]

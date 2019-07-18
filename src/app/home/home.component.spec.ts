@@ -12,8 +12,14 @@ describe('HomeComponent', () => {
 
   beforeEach(
     async(() => {
-      mockHomeService = jasmine.createSpyObj('HomeService', ['getExperience']);
+      mockHomeService = jasmine.createSpyObj('HomeService', [
+        'getExperience',
+        'getEducation',
+        'getSkills'
+      ]);
       mockHomeService.getExperience.and.returnValue(of([]));
+      mockHomeService.getEducation.and.returnValue(of([]));
+      mockHomeService.getSkills.and.returnValue(of({}));
       TestBed.configureTestingModule({
         declarations: [HomeComponent],
         schemas: [CUSTOM_ELEMENTS_SCHEMA],
