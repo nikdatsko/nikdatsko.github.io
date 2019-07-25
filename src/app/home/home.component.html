@@ -1,25 +1,25 @@
-<app-section *ngIf="!!work.length" className="top_section">
+<app-section *ngIf="!!(experienceStream | async)?.length" className="top_section">
   <ng-container aside>
     <h1 itemprop="jobTitle">Front-end developer</h1>
   </ng-container>
   <ng-container article>
-    <app-place *ngFor="let place of work" [place]="place"></app-place>
+    <app-place *ngFor="let place of (experienceStream | async)" [place]="place"></app-place>
   </ng-container>
 </app-section>
-<app-section *ngIf="!!education.length">
+<app-section *ngIf="!!(educationStream | async)?.length">
   <ng-container aside>
     <h1>Education</h1>
   </ng-container>
   <ng-container article>
-    <app-place *ngFor="let place of education" [place]="place"></app-place>
+    <app-place *ngFor="let place of (educationStream | async)" [place]="place"></app-place>
   </ng-container>
 </app-section>
-<app-section *ngIf="!!skills">
+<app-section *ngIf="!!(skillsStream | async)">
   <ng-container aside>
     <h1>Skills</h1>
   </ng-container>
   <ng-container article>
-    <div *ngFor="let skillset of skills | keyvalue : disableReorder">
+    <div *ngFor="let skillset of (skillsStream | async) | keyvalue : disableReorder">
       <h3>{{skillset.key}}</h3>
       <div *ngFor="let skill of skillset.value">{{skill}}</div>
       <br/>

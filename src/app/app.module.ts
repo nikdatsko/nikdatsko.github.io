@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { MetaReducer, StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import {
   StoreRouterConnectingModule,
@@ -32,6 +33,7 @@ export const metaReducers: MetaReducer<any>[] = !environment.production
     HttpClientModule,
     AppRoutingModule,
     StoreModule.forRoot(reducers, { metaReducers }),
+    EffectsModule.forRoot([]),
     StoreRouterConnectingModule.forRoot(),
     !environment.production ? StoreDevtoolsModule.instrument() : []
   ],
