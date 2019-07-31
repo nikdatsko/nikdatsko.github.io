@@ -9,7 +9,7 @@ export const getHomeState = createSelector(
 
 export const getExperience = createSelector(
   getHomeState,
-  ({ experience }: HomeState) => experience
+  (state: HomeState) => state.experience
 );
 export const getEducation = createSelector(
   getHomeState,
