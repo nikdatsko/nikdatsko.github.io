@@ -9,7 +9,13 @@ body {
   color: $black;
   font-size: 14px;
   overflow-y: scroll !important;
+  box-sizing: border-box;
   @include transition(0.3s, 0.4s, opacity,  ease-in);
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 /**********************************************************
   Common classes
@@ -61,7 +67,7 @@ p {
 h1 {
   font-family: 'Fjalla One', sans-serif;
   font-size: 3em;
-  margin-bottom: 0.6em;
+  margin-bottom: 0;
   text-shadow: -1px 1px 0px #fff;
 
   &.hidden {
@@ -228,6 +234,10 @@ figure img {
   max-width: 100%;
 }
 /*_________________________________________________________*/
+
+.app {
+  display: flex;
+}
 
 .wrapper {
   width: 100%;

@@ -4,7 +4,7 @@ import { HomeState } from './../reducers/home.reducer';
 
 export const getHomeState = createSelector(
   fromFeature.getHomeRootState,
-  (state: fromFeature.HomeRootState) => state.home
+  (state: fromFeature.HomeRootState) => (state ? state.home : null)
 );
 
 export const getExperience = createSelector(
@@ -13,7 +13,7 @@ export const getExperience = createSelector(
 );
 export const getEducation = createSelector(
   getHomeState,
-  ({ education }: HomeState) => education
+  (state: HomeState) => state ? state.education : null
 );
 export const getSkills = createSelector(
   getHomeState,

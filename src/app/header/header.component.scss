@@ -1,81 +1,32 @@
 @import '~src/assets/styles/mixins';
 
-header {
+:host {
   display: block;
   background: #fff;
-  border-bottom: 1px #eeeeee solid;
-  position: fixed;
-  width: 100%;
-  z-index: 99;
-  top: 0;
-  height: 140px;
-  .wrapper {
-    position: relative;
-    height: 100%;
-    span {
-      position: absolute;
-    }
-  }
-}
-
-header,
-.image,
-.name,
-.familyname,
-.tel_h,
-.email_h {
-  @include transition();
-  -webkit-backface-visibility: hidden;
+  border-right: 1px #eeeeee solid;
+  width: 400px;
 }
 
 .name_h {
   color: #231f20;
   span {
-    position: relative;
     text-shadow: 1px 0 0 #231f20;
     font-size: 3.5em;
   }
 }
 .contacts_h {
   span {
+    display: block;
     font-size: 1.2em;
     line-height: 20px;
   }
 }
 .image {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  bottom: 10px;
-
   img {
     max-height: 100%;
   }
 }
-.name {
-  top: 20px;
-  left: 110px;
-}
-.familyname {
-  top: 75px;
-  left: 110px;
-}
-.tel_h {
-  top: 20px;
-  right: 10px;
-}
-.email_h {
-  top: 60px;
-  right: 10px;
-}
-.portfolio_h {
-  top: 100px;
-  right: 55px;
-}
 .print_h {
-  position: absolute;
-  top: 95px;
-  right: 10px;
   display: block;
   width: 30px;
   height: 30px;
@@ -83,32 +34,6 @@ header,
     rect {
       fill: #231f20;
     }
-  }
-}
-.recommendation_h {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  text-align: right;
-}
-
-.scrolled {
-  @include translate3d(0, -75px);
-
-  .image {
-    @include translatescale(0, 37px, 0, 0.5, 0.5);
-  }
-  .name {
-    @include translate3d(-25px, 65px);
-  }
-  .familyname {
-    @include translate3d(65px, 10px);
-  }
-  .tel_h {
-    @include translate3d(-310px, 80px);
-  }
-  .email_h {
-    @include translate3d(-125px, 40px);
   }
 }
 

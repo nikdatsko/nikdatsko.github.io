@@ -13,6 +13,10 @@ import { Place } from '../home/home.service';
 })
 export class HeaderComponent {
   scrolled = false;
+  readonly educationStream: Observable<Place[]> = this.store.pipe(
+    select(fromHome.getEducation),
+    filter(x => !!x)
+  );
 
   constructor(
     private router: Router,

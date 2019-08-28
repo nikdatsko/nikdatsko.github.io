@@ -1,16 +1,9 @@
 @import '~src/assets/styles/mixins';
 aside {
-  width: 25%; /*240/960*/
-  float: left;
-  padding: 10px 0;
-  text-align: right;
+  padding: 10px;
   h1 {
     line-height: 1.1em;
   }
-}
-article {
-  width: 75%; /*720/960*/
-  float: right;
 }
 .inner {
   box-shadow: 0 0 5px #ccc;

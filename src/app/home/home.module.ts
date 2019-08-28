@@ -7,11 +7,10 @@ import { EffectsModule } from '@ngrx/effects';
 import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { SharedModule } from '../shared/shared.module';
-import { PlaceComponent } from './place/place.component';
 import { effects, reducers, homeStorage } from './store';
 
 @NgModule({
-  declarations: [HomeComponent, PlaceComponent],
+  declarations: [HomeComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,

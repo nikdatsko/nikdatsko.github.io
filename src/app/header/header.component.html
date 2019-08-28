@@ -1,28 +1,35 @@
-<header [class.scrolled]="scrolled">
-  <div class="wrapper">
-    <a routerLink="/" class="name_h">
-      <figure class="image">
-        <img src="assets/images/nik.jpg" itemprop="image">
-      </figure>
-      <span class="name" itemprop="name">Nik</span>
-      <span class="familyname" itemprop="familyName">Datsko</span>
-    </a>
-    <div class="contacts_h">
-      <span class="tel_h" itemprop="telephone">+420.778.045.707</span>
-      <span class="email_h"><a routerLink="/contact" itemprop="email">mydatsko@gmail.com</a></span>
-      <span class="portfolio_h"><a routerLink="/portfolio">portfolio</a></span>
-      <a class="print_h" (click)="print()" title="Print">
-        <svg width="30" height="30" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" viewBox="0 0 512 512">
-          <rect fill="#908E8F" x="159.992" y="96" width="96" height="20" />
-          <rect fill="#908E8F" x="159.992" y="160" width="192.016" height="20" />
-          <rect fill="#908E8F" x="159.992" y="224" width="192.016" height="20" />
-          <path fill="#231F20" d="M464.008,224h-16v64h-32V96l-96-96H95.992v288h-32v-64h-16c-26.5,0-48,21.5-48,48v192c0,26.5,21.5,48,48,48h416.016   c26.5,0,48-21.5,48-48V272C512.008,245.5,490.508,224,464.008,224z M127.992,32h160v96h96.016v160H127.992V32z M31.992,352v-32h64   v32H31.992z M448.008,448H63.992v-32h384.016V448z"
-          />
-        </svg>
-      </a>
-      <p class="recommendation_h only4print">
-        (It is highly recommended to get acquainted with<br>the web version of the resumé at <a href="http://nik.niklenburg.com">nik.niklenburg.com</a>)
-      </p>
-    </div>
-  </div>
-</header>
+<a routerLink="/" class="name_h">
+  <figure class="image">
+    <img src="assets/images/nik.jpg" itemprop="image">
+  </figure>
+  <span class="name" itemprop="name">Nik</span>
+  <span class="familyname" itemprop="familyName">Datsko</span>
+</a>
+<div class="contacts_h">
+  <span class="tel_h" itemprop="telephone">+420.778.045.707</span>
+  <span class="email_h"><a routerLink="/contact" itemprop="email">mydatsko@gmail.com</a></span>
+  <span class="portfolio_h"><a routerLink="/portfolio">portfolio</a></span>
+  <a class="print_h" (click)="print()" title="Print">
+    <svg width="30" height="30" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" viewBox="0 0 512 512">
+      <rect fill="#908E8F" x="159.992" y="96" width="96" height="20" />
+      <rect fill="#908E8F" x="159.992" y="160" width="192.016" height="20" />
+      <rect fill="#908E8F" x="159.992" y="224" width="192.016" height="20" />
+      <path fill="#231F20" d="M464.008,224h-16v64h-32V96l-96-96H95.992v288h-32v-64h-16c-26.5,0-48,21.5-48,48v192c0,26.5,21.5,48,48,48h416.016   c26.5,0,48-21.5,48-48V272C512.008,245.5,490.508,224,464.008,224z M127.992,32h160v96h96.016v160H127.992V32z M31.992,352v-32h64   v32H31.992z M448.008,448H63.992v-32h384.016V448z"
+      />
+    </svg>
+  </a>
+  <p class="recommendation_h only4print">
+    (It is highly recommended to get acquainted with<br>the web version of the resumé at <a href="http://nik.niklenburg.com">nik.niklenburg.com</a>)
+  </p>
+</div>
+<div *ngIf="!!(educationStream | async)?.length">
+  <h2>Education</h2>
+  <app-place *ngFor="let place of (educationStream | async)" [place]="place"></app-place>
+</div>
+<div>
+  <h2>About myself</h2>
+  <p>I am a person who was born in Soviet Union, raised in Ukraine, studied in Poland, had a year of internship in the USA and
+    a year of volunteering in France, worked in Russia, travelled all over Europe, got married in Dominican Republic, spent
+    a year with his wife in Latin America freelancing, worked remotely travelling with his wife and daughter in Asia and
+    is now a member of EPAM team in Prague.</p>
+</div>

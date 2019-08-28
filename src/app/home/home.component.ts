@@ -14,9 +14,6 @@ export class HomeComponent {
   readonly experienceStream: Observable<Place[]> = this.store.pipe(
     select(fromStore.getExperience)
   );
-  readonly educationStream: Observable<Place[]> = this.store.pipe(
-    select(fromStore.getEducation)
-  );
   readonly skillsStream: Observable<any> = this.store.pipe(
     select(fromStore.getSkills)
   );
