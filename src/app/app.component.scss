@@ -1,1 +1,6 @@
 @import '~src/assets/styles/mixins';
+
+.outer {
+  flex: 1;
+  overflow: auto;
+}
