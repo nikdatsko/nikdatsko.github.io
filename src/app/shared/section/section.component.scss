@@ -1,3 +1,4 @@
+@import '~src/assets/styles/variables';
 @import '~src/assets/styles/mixins';
 aside {
   padding: 10px;
@@ -6,9 +7,9 @@ aside {
   }
 }
 .inner {
-  box-shadow: 0 0 5px #ccc;
-  margin: 10px 1.3888888888888888888888888888889%; /*10/720*/
-  padding: 5px 0.69444444444444444444444444444444%; /*5/720*/
+  box-shadow: 0 0 5px $gray-shadow;
+  margin: 0 1.3888888888888888888888888888889% 10px; /*10/720*/
+  padding: 5px;
   .inner2 {
     background: #fff;
   }
@@ -22,33 +23,8 @@ aside {
     }
   }
 }
-@media all and (max-width: 1024px) {
-  aside {
-    width: 30%;
-  }
-  article {
-    width: 70%;
-  }
-}
-@media all and (max-width: 767px) {
-  section {
-    aside {
-      width: 100%;
-      text-align: center;
-      h1 {
-        margin-bottom: 0;
-      }
-    }
-    article {
-      width: 100%;
-    }
-  }
-}
 
 @media print {
-  .top_section {
-    // margin-top: -50px;
-  }
   section {
     aside {
       width: 30%;
@@ -64,7 +40,7 @@ aside {
   }
   .inner {
     box-shadow: none;
-    border-left: 1px #eeeeee solid;
+    border-left: 1px $gray-border solid;
   }
   .about {
     .inner,

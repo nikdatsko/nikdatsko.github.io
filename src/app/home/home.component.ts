@@ -21,7 +21,6 @@ export class HomeComponent {
 
   constructor(private store: Store<fromStore.HomeRootState>) {
     this.store.dispatch(new fromStore.LoadData('experience'));
-    this.store.dispatch(new fromStore.LoadData('education'));
     this.store.dispatch(new fromStore.LoadData('skills'));
   }
 }

@@ -1,4 +1,25 @@
+@import '~src/assets/styles/variables';
+
 :host {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.portfolio {
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: 1.1em;
+  text-shadow: 0.5px 0.1px 0 $blue;
+}
+
+.content {
   display: flex;
 }
 
@@ -8,4 +29,29 @@ aside {
 
 main {
   flex: 1;
+}
+
+.skill {
+  line-height: 1.2em;
+  font-size: 0.85em;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  margin: -10px -10px .5em;
+  padding: 10px;
+  border-bottom: 1px $gray-bg solid;
+}
+
+h2 {
+  text-shadow: none;
+  margin: 0;
+}
+
+.total {
+  margin-left: auto;
+  margin-right: 10px;
+  width: 80px;
+  text-align: center;
 }

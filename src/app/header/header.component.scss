@@ -1,21 +1,33 @@
+@import '~src/assets/styles/variables';
 @import '~src/assets/styles/mixins';
 
 :host {
-  display: block;
+  display: flex;
+  flex-direction: column;
   background: #fff;
-  border-right: 1px #eeeeee solid;
-  width: 400px;
+  border-right: 1px $gray-border solid;
+  width: 30%;
+  padding: 10px;
+  max-width: 400px;
+  min-width: 300px;
   overflow: auto;
 }
 
 .name_h {
-  color: #231f20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  color: $black;
+  text-decoration: none;
   span {
-    text-shadow: 1px 0 0 #231f20;
-    font-size: 3.5em;
+    text-shadow: 1px 0 0 $black;
+    font-size: 2em;
   }
 }
 .contacts_h {
+  margin-bottom: 20px;
+  text-align: center;
   span {
     display: block;
     font-size: 1.2em;
@@ -23,19 +35,27 @@
   }
 }
 .image {
-  img {
-    max-height: 100%;
+  width: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.education {
+  margin-bottom: 10px;
+
+  &-item {
+    margin-bottom: 10px;
   }
 }
-.print_h {
-  display: block;
-  width: 30px;
-  height: 30px;
-  &:hover {
-    rect {
-      fill: #231f20;
-    }
-  }
+
+.networks {
+  margin-top: auto;
+  text-align: center;
+}
+
+.network {
+  margin: 0 10px;
 }
 
 @media print {
@@ -45,7 +65,6 @@
   }
   header,
   .name,
-  .familyname,
   .image,
   .tel_h,
   .email_h {

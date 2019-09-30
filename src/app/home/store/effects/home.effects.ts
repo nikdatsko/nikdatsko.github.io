@@ -17,7 +17,6 @@ export class HomeEffects {
     ofType(fromActions.LOAD_DATA),
     map((action: fromActions.LoadData) => action.payload),
     mergeMap((type: string) => {
-      console.log(type);
       return this.homeService
         .getData(type)
         .pipe(

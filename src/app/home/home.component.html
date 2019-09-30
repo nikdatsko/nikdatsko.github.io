@@ -1,24 +1,34 @@
-<main>
-  <app-section *ngIf="!!(experienceStream | async)?.length" className="top_section">
-    <ng-container aside>
-      <h1 itemprop="jobTitle">Front-end developer</h1>
-    </ng-container>
-    <ng-container article>
-      <app-place *ngFor="let place of (experienceStream | async)" [place]="place"></app-place>
-    </ng-container>
-  </app-section>
-</main>
-<aside>
-  <app-section *ngIf="!!(skillsStream | async)">
-    <ng-container aside>
-      <h1>Skills</h1>
-    </ng-container>
-    <ng-container article>
-      <div *ngFor="let skillset of (skillsStream | async) | keyvalue : disableReorder">
-        <h3>{{skillset.key}}</h3>
-        <div *ngFor="let skill of skillset.value">{{skill}}</div>
-        <br/>
-      </div>
-    </ng-container>
-  </app-section>
-</aside>
+<header class="header">
+  <h1 itemprop="jobTitle">Front-end developer</h1>
+  <a class="portfolio" routerLink="/portfolio">portfolio</a>
+</header>
+<p class="recommendation_h only4print">
+  (It is highly recommended to get acquainted with<br>the web version of the resumé at <a href="http://nik.niklenburg.com">nik.niklenburg.com</a>)
+</p>
+<div class="content">
+  <main>
+    <app-section *ngIf="!!(experienceStream | async)?.length" className="top_section">
+      <ng-container article>
+        <div class="heading">
+          <h2>Experience</h2>
+          <span class="total"> > 7 years</span>
+        </div>
+        <app-place *ngFor="let place of (experienceStream | async)" [place]="place"></app-place>
+      </ng-container>
+    </app-section>
+  </main>
+  <aside>
+    <app-section *ngIf="!!(skillsStream | async)">
+      <ng-container article>
+        <div class="heading">
+          <h2>Skills</h2>
+        </div>
+        <div *ngFor="let skillset of (skillsStream | async) | keyvalue : disableReorder">
+          <h3>{{skillset.key}}</h3>
+          <div class="skill" *ngFor="let skill of skillset.value">{{skill}}</div>
+          <br/>
+        </div>
+      </ng-container>
+    </app-section>
+  </aside>
+</div>

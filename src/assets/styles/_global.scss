@@ -64,10 +64,9 @@ p {
   }
 }
 h1 {
-  font-family: 'Fjalla One', sans-serif;
   font-size: 3em;
   margin-bottom: 0;
-  text-shadow: -1px 1px 0px #fff;
+  text-shadow: 0px -1px 0px #fff, 1px 1px 0 $black;
 
   &.hidden {
     @media all and (max-width: 479px) {
@@ -76,12 +75,12 @@ h1 {
   }
 }
 h2 {
-  text-shadow: 1px 0 0 #231f20;
+  text-shadow: 1px 0 0 $black;
   font-size: 2em;
   margin-bottom: 0.5em;
 }
 h3 {
-  text-shadow: 1px 0 0 #231f20;
+  text-shadow: 1px 0 0 $black;
   font-size: 1.5em;
   margin-bottom: 0.1em;
 }
@@ -99,6 +98,15 @@ a {
     outline: none;
   }
 }
+strong,
+b {
+  text-shadow: 1px 0 0 $black;
+
+  a & {
+    text-shadow: 1px 0 0 $blue
+  }
+}
+
 .placeholder {
   color: #aaa;
 }
@@ -128,14 +136,14 @@ textarea {
   display: block;
   width: 100%;
   padding: 10px;
-  border: 1px #eee solid;
+  border: 1px $gray-border solid;
   @include box-sizing();
   font: inherit;
   line-height: 1;
   @include transition();
   &:hover,
   &:focus {
-    border-color: #231f20;
+    border-color: $black;
   }
   &:focus {
     outline: none;
@@ -170,7 +178,7 @@ input[type='checkbox'] {
       left: 0;
       width: 20px;
       height: 20px;
-      border: 1px #eee solid;
+      border: 1px $gray-border solid;
     }
     &:after {
       top: 5px;
@@ -215,13 +223,13 @@ input[type='button'] {
   text-transform: uppercase;
   letter-spacing: 0.02em;
   text-shadow: 1px 0 0 $black;
-  @include box-shadow(0 1px 2px #ccc);
+  @include box-shadow(0 1px 2px $gray-shadow);
   @include transition();
   &:hover {
-    @include box-shadow(0 2px 5px #ccc);
+    @include box-shadow(0 2px 5px $gray-shadow);
   }
   &:active {
-    @include box-shadow(0 1px 1px #ccc);
+    @include box-shadow(0 1px 1px $gray-shadow);
     @include transition(0.1s);
   }
   &:disabled {
@@ -231,19 +239,13 @@ input[type='button'] {
 
 figure img {
   max-width: 100%;
+  display: block;
 }
 /*_________________________________________________________*/
 
 .app {
   display: flex;
   height: 100%;
-}
-
-.wrapper {
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  @include ca();
 }
 
 @media print {
