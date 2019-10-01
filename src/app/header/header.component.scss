@@ -11,6 +11,23 @@
   max-width: 400px;
   min-width: 300px;
   overflow: auto;
+
+  @media print {
+    width: auto;
+    max-width: none;
+    min-width: 0;
+    border-right: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    & > div {
+      flex: 1;
+    }
+
+    .about {
+      flex-basis: 100%;
+    }
+  }
 }
 
 .name_h {
@@ -39,6 +56,10 @@
   border-radius: 50%;
   overflow: hidden;
   margin-right: 10px;
+
+  @media print {
+    width: 60px;
+  }
 }
 
 .education {
@@ -56,21 +77,4 @@
 
 .network {
   margin: 0 10px;
-}
-
-@media print {
-  .portfolio_h,
-  .print_h {
-    display: none;
-  }
-  header,
-  .name,
-  .image,
-  .tel_h,
-  .email_h {
-    @include notransform();
-  }
-  header {
-    position: relative;
-  }
 }

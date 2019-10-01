@@ -25,22 +25,8 @@ aside {
 }
 
 @media print {
-  section {
-    aside {
-      width: 30%;
-      text-align: right;
-      h1 {
-        font-size: 2.6em;
-        margin-top: 10px;
-      }
-    }
-    article {
-      width: 70%;
-    }
-  }
   .inner {
     box-shadow: none;
-    border-left: 1px $gray-border solid;
   }
   .about {
     .inner,

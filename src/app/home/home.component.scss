@@ -14,32 +14,55 @@ header {
 
 .portfolio {
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   font-size: 1.1em;
   text-shadow: 0.5px 0.1px 0 $blue;
 }
 
 .content {
   display: flex;
+
+  @media print {
+    flex-direction: column;
+  }
 }
 
 aside {
   width: 200px;
+
+  @media print {
+    width: auto;
+  }
 }
 
 main {
   flex: 1;
 }
 
+.skillset {
+  margin-bottom: 10px;
+}
+
 .skill {
   line-height: 1.2em;
   font-size: 0.85em;
+
+  @media print {
+    display: inline-block;
+    font-size: 1em;
+
+    &:not(:last-child) {
+      &:after {
+        content: ',\00a0';
+      }
+    }
+  }
 }
 
 .heading {
   display: flex;
   align-items: center;
-  margin: -10px -10px .5em;
+  margin: -10px -10px 0.5em;
   padding: 10px;
   border-bottom: 1px $gray-bg solid;
 }

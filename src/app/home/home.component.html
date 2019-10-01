@@ -1,10 +1,7 @@
 <header class="header">
   <h1 itemprop="jobTitle">Front-end developer</h1>
-  <a class="portfolio" routerLink="/portfolio">portfolio</a>
+  <a class="portfolio not4print" routerLink="/portfolio">portfolio</a>
 </header>
-<p class="recommendation_h only4print">
-  (It is highly recommended to get acquainted with<br>the web version of the resumé at <a href="http://nik.niklenburg.com">nik.niklenburg.com</a>)
-</p>
 <div class="content">
   <main>
     <app-section *ngIf="!!(experienceStream | async)?.length" className="top_section">
@@ -23,10 +20,9 @@
         <div class="heading">
           <h2>Skills</h2>
         </div>
-        <div *ngFor="let skillset of (skillsStream | async) | keyvalue : disableReorder">
+        <div class="skillset" *ngFor="let skillset of (skillsStream | async) | keyvalue : disableReorder">
           <h3>{{skillset.key}}</h3>
           <div class="skill" *ngFor="let skill of skillset.value">{{skill}}</div>
-          <br/>
         </div>
       </ng-container>
     </app-section>

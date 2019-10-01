@@ -68,10 +68,8 @@ h1 {
   margin-bottom: 0;
   text-shadow: 0px -1px 0px #fff, 1px 1px 0 $black;
 
-  &.hidden {
-    @media all and (max-width: 479px) {
-      display: block;
-    }
+  @media print {
+    text-shadow: 1px 0 0 $black;
   }
 }
 h2 {
@@ -103,7 +101,7 @@ b {
   text-shadow: 1px 0 0 $black;
 
   a & {
-    text-shadow: 1px 0 0 $blue
+    text-shadow: 1px 0 0 $blue;
   }
 }
 
@@ -246,6 +244,11 @@ figure img {
 .app {
   display: flex;
   height: 100%;
+
+  @media print {
+    display: block;
+    height: auto;
+  }
 }
 
 @media print {
