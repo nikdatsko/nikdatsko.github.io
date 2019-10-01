@@ -23,4 +23,8 @@ export class HomeComponent {
     this.store.dispatch(new fromStore.LoadData('experience'));
     this.store.dispatch(new fromStore.LoadData('skills'));
   }
+
+  print() {
+    window.print();
+  }
 }
