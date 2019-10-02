@@ -1,11 +1,5 @@
 @import '~src/assets/styles/variables';
 @import '~src/assets/styles/mixins';
-aside {
-  padding: 10px;
-  h1 {
-    line-height: 1.1em;
-  }
-}
 .inner {
   box-shadow: 0 0 5px $gray-shadow;
   margin: 0 1.3888888888888888888888888888889% 10px; /*10/720*/
@@ -27,18 +21,9 @@ aside {
 @media print {
   .inner {
     box-shadow: none;
+    padding: 0;
   }
-  .about {
-    .inner,
-    .padding {
-      margin-bottom: 0;
-      padding-bottom: 0;
-    }
-    article {
-      p {
-        line-height: 130%;
-        margin-bottom: 0.6em;
-      }
-    }
+  .padding {
+    padding: 0;
   }
 }

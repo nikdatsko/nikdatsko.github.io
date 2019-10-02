@@ -18,7 +18,7 @@
           <h2>Experience</h2>
           <span class="total"> > 7 years</span>
         </div>
-        <app-place *ngFor="let place of (experienceStream | async)" [place]="place"></app-place>
+        <app-place class="no-pagebreak" *ngFor="let place of (experienceStream | async)" [place]="place"></app-place>
       </ng-container>
     </app-section>
   </main>

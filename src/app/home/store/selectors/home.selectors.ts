@@ -11,10 +11,6 @@ export const getExperience = createSelector(
   getHomeState,
   (state: HomeState) => state.experience
 );
-export const getEducation = createSelector(
-  getHomeState,
-  (state: HomeState) => state ? state.education : null
-);
 export const getSkills = createSelector(
   getHomeState,
   ({ skills }: HomeState) => skills

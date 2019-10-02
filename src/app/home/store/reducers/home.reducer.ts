@@ -3,13 +3,11 @@ import { Place } from '../../home.service';
 
 export interface HomeState {
   experience: Place[];
-  education: Place[];
   skills: any;
 }
 
 export const initialState: HomeState = {
   experience: [],
-  education: [],
   skills: null
 };
 

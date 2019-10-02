@@ -21,7 +21,7 @@ export function homeStorage(reducer: ActionReducer<any>): ActionReducer<any> {
   const config: LocalStorageConfig = {
     keys: [
       {
-        home: ['experience', 'education', 'skills']
+        home: ['experience', 'skills']
       }
     ],
     rehydrate: true,

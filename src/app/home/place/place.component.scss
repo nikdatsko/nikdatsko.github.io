@@ -1,8 +1,8 @@
+@import '~src/assets/styles/variables';
 :host {
   display: block;
   margin-bottom: 20px;
   clear: both;
-  page-break-inside: avoid;
 }
 
 p,
@@ -21,10 +21,10 @@ ul {
     width: 80px;
     text-align: center;
     &.top {
-      background: #9be1fb;
+      background: $lightblue;
     }
     &.bottom {
-      background: #c5effd;
+      background: $lighterblue;
     }
   }
 }

@@ -19,6 +19,7 @@
     border-right: 0;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
 
     & > div {
       flex: 1;
@@ -40,6 +41,11 @@
   span {
     text-shadow: 1px 0 0 $black;
     font-size: 2em;
+
+    @media print {
+      text-shadow: none;
+      font-weight: 600;
+    }
   }
 }
 .contacts_h {
@@ -50,15 +56,29 @@
     font-size: 1.2em;
     line-height: 20px;
   }
+
+  @media print {
+    margin-bottom: 0;
+  }
 }
 .image {
   width: 100px;
   border-radius: 50%;
   overflow: hidden;
   margin-right: 10px;
+}
 
+.image4print {
+  width: 90px;
+  margin-right: 10px;
+}
+
+.profile {
   @media print {
-    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
   }
 }
 
@@ -67,6 +87,14 @@
 
   &-item {
     margin-bottom: 10px;
+  }
+
+  @media print {
+    margin-bottom: 0;
+
+    &-item:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
