@@ -1,0 +1,143 @@
+@import '~src/assets/styles/variables';
+@import '~src/assets/styles/mixins';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-right: 1px $gray-border solid;
+  width: 30%;
+  padding: 10px;
+  max-width: 400px;
+  min-width: 300px;
+  overflow: auto;
+
+  @media print, (max-width: 1000px) {
+    width: auto;
+    max-width: none;
+    min-width: 0;
+    border-right: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    & > div {
+      flex: 1;
+    }
+
+    .about {
+      flex-basis: 100%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+
+    .education {
+      width: 100%;
+    }
+
+    .about {
+      margin-top: 20px;
+    }
+  }
+}
+
+.name_h {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  color: $black;
+  text-decoration: none;
+  span {
+    text-shadow: 1px 0 0 $black;
+    font-size: 2em;
+
+    @media print {
+      text-shadow: none;
+      font-weight: 600;
+    }
+  }
+}
+.contacts_h {
+  margin-bottom: 20px;
+  text-align: center;
+  span {
+    display: block;
+    font-size: 1.2em;
+    line-height: 20px;
+  }
+
+  @media print, (max-width: 1000px) {
+    margin-bottom: 0;
+  }
+}
+.image {
+  width: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.image4print {
+  width: 90px;
+  margin-right: 10px;
+}
+
+.profile {
+  @media print, (max-width: 1000px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+}
+
+.education {
+  margin-bottom: 10px;
+
+  &-item {
+    margin-bottom: 10px;
+  }
+
+  @media print, (max-width: 1000px) {
+    margin-bottom: 0;
+
+    &-item:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.networks {
+  margin-top: auto;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.network {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 1px 0 0 #fff;
+  font-size: 0.9em;
+
+  &-linkedin {
+    background: #0077b5;
+  }
+
+  &-github {
+    background: #24292e;
+  }
+
+  &-upwork {
+    background: #6fda44;
+  }
+}

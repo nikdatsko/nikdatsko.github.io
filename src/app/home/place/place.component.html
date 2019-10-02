@@ -1,0 +1,14 @@
+<div class="date">
+  <div class="top">
+    <span>{{place?.to_date || 'current'}}</span>
+  </div>
+  <div class="bottom">
+    <span>{{place?.from_date}}</span>
+  </div>
+</div>
+<h2>{{place?.role}}</h2>
+<h3 *ngIf="!!place?.company">{{place.company}}</h3>
+<h4>{{place?.location}}</h4>
+<ul>
+  <li *ngFor="let duty of place?.duties">{{duty}}</li>
+</ul>

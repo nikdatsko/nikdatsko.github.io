@@ -1,0 +1,47 @@
+@import '~src/assets/styles/variables';
+:host {
+  display: block;
+  margin-bottom: 20px;
+  clear: both;
+}
+
+p,
+li {
+  line-height: 150%;
+}
+ul {
+  list-style-type: disc;
+}
+
+.date {
+  float: right;
+  margin: 10px;
+  div {
+    padding: 10px 0;
+    width: 80px;
+    text-align: center;
+    &.top {
+      background: $lightblue;
+    }
+    &.bottom {
+      background: $lighterblue;
+    }
+  }
+}
+
+@media print {
+  .date div {
+    &.top,
+    &.bottom {
+      border: 1px #ccc solid;
+    }
+    &.top {
+      border-bottom: none;
+    }
+  }
+
+  p,
+  li {
+    line-height: 130%;
+  }
+}

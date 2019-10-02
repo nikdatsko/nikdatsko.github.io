@@ -1,0 +1,29 @@
+@import '~src/assets/styles/variables';
+@import '~src/assets/styles/mixins';
+.inner {
+  box-shadow: 0 0 5px $gray-shadow;
+  margin: 0 1.3888888888888888888888888888889% 10px; /*10/720*/
+  padding: 5px;
+  .inner2 {
+    background: #fff;
+  }
+}
+.padding {
+  padding: 10px;
+  ul {
+    list-style-type: disc;
+    li {
+      line-height: 150%;
+    }
+  }
+}
+
+@media print {
+  .inner {
+    box-shadow: none;
+    padding: 0;
+  }
+  .padding {
+    padding: 0;
+  }
+}
