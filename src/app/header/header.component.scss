@@ -40,6 +40,18 @@
     .about {
       margin-top: 20px;
     }
+
+    @media print {
+      flex-direction: row;
+
+      .education {
+        width: auto;
+      }
+
+      .about {
+        margin-top: 0;
+      }
+    }
   }
 }
 
