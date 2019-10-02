@@ -12,7 +12,7 @@
   min-width: 300px;
   overflow: auto;
 
-  @media print {
+  @media print, (max-width: 1000px) {
     width: auto;
     max-width: none;
     min-width: 0;
@@ -27,6 +27,18 @@
 
     .about {
       flex-basis: 100%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+
+    .education {
+      width: 100%;
+    }
+
+    .about {
+      margin-top: 20px;
     }
   }
 }
@@ -57,7 +69,7 @@
     line-height: 20px;
   }
 
-  @media print {
+  @media print, (max-width: 1000px) {
     margin-bottom: 0;
   }
 }
@@ -74,7 +86,7 @@
 }
 
 .profile {
-  @media print {
+  @media print, (max-width: 1000px) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,7 +101,7 @@
     margin-bottom: 10px;
   }
 
-  @media print {
+  @media print, (max-width: 1000px) {
     margin-bottom: 0;
 
     &-item:last-child {
@@ -100,6 +112,7 @@
 
 .networks {
   margin-top: auto;
+  padding-top: 20px;
   text-align: center;
 }
 

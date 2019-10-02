@@ -7,6 +7,11 @@
   display: inline-block;
   vertical-align: top;
   margin-right: 1em;
+
+  @media (max-width: 600px) {
+    display: block;
+    margin-bottom: 10px;
+  }
 }
 .result {
   color: $green;
