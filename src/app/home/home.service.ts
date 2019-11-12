@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { DataTypes } from './home.enum';
 
 export interface Place {
   role: string;
@@ -17,7 +18,7 @@ export interface Place {
 export class HomeService {
   constructor(private http: HttpClient) {}
 
-  getData(type: string): Observable<any> {
-    return this.http.get(`/assets/data/${type}.json`);
+  getData(type: DataTypes): Observable<Place[]> {
+    return this.http.get<Place[]>(`/assets/data/${type}.json`);
   }
 }

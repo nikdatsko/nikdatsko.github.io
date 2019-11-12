@@ -4,6 +4,7 @@ import {
   createFeatureSelector
 } from '@ngrx/store';
 import { LocalStorageConfig, localStorageSync } from 'ngrx-store-localstorage';
+import { DataTypes } from '../../home.enum';
 
 import * as fromHome from './home.reducer';
 
@@ -21,7 +22,7 @@ export function homeStorage(reducer: ActionReducer<any>): ActionReducer<any> {
   const config: LocalStorageConfig = {
     keys: [
       {
-        home: ['experience', 'skills']
+        home: [DataTypes.experience, DataTypes.skills, 'loaded', 'loading']
       }
     ],
     rehydrate: true,

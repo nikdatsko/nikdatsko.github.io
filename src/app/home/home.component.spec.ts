@@ -20,8 +20,9 @@ describe('HomeComponent', () => {
     home: {
       home: {
         experience: [],
-        education: [],
-        skills: null
+        skills: null,
+        loading: [],
+        loaded: []
       }
     }
   };
@@ -40,11 +41,13 @@ describe('HomeComponent', () => {
     })
   );
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(HomeComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  beforeEach(
+    async(() => {
+      fixture = TestBed.createComponent(HomeComponent);
+      component = fixture.componentInstance;
+      fixture.detectChanges();
+    })
+  );
 
   it('should create', () => {
     expect(component).toBeTruthy();

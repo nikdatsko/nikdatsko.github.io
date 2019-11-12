@@ -16,12 +16,12 @@ export class HomeEffects {
   loadData = this.actionStream.pipe(
     ofType(fromActions.LOAD_DATA),
     map((action: fromActions.LoadData) => action.payload),
-    mergeMap((type: string) => {
+    mergeMap(type => {
       return this.homeService
         .getData(type)
         .pipe(
           map(data => new fromActions.LoadDataSuccess({ type, data })),
-          catchError(error => from([new fromActions.LoadDataFail()]))
+          catchError(error => from([new fromActions.LoadDataFail(type)]))
         );
     })
   );
