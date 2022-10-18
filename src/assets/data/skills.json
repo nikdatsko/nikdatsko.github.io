@@ -7,7 +7,7 @@
     "D3.js",
     "Ag-grid",
     "Highcharts",
-    "Moment.js‍",
+    "Moment.js",
     "Karma/jasmine",
     "Nightwatch",
     "React",
@@ -33,10 +33,21 @@
     "Gulp",
     "Webpack",
     "VS code",
-    "JetBrains IDEA",
-    "SCRUM‍",
+    "WebStorm",
     "Photoshop",
-    "Figma"
+    "Figma",
+    "AWS Lambda"
   ],
-  "Languages": ["English", "Russian", "Polish", "Czech", "French", "Spanish"]
+  "Languages": ["English", "Russian", "Polish", "Czech", "French", "Spanish"],
+  "Soft Skills": [
+    "Communication",
+    "Mentoring",
+    "Problem-solving",
+    "Leadership",
+    "Product management",
+    "Agile/SCRUM",
+    "Emotional intelligence",
+    "Proactive",
+    "Self management"
+  ]
 }
