@@ -5,14 +5,15 @@
     "TypeScript",
     "Rx.js",
     "D3.js",
-    "ag-grid",
+    "Ag-grid",
+    "Highcharts",
     "Moment.js‍",
     "Karma/jasmine",
+    "Nightwatch",
     "React",
     "Redux",
     "jQuery",
-    "Node",
-    "AJAX‍"
+    "Node"
   ],
   "CSS": [
     "SCSS",
@@ -25,6 +26,7 @@
   "Markup": ["HTML", "SVG", "XML", "Django", "Smarty", "HTML newsletters"],
   "CMSs": ["WordPress", "Drupal", "Joomla", "OpenCart"],
   "Tools": [
+    "SonarQube",
     "Git",
     "JIRA",
     "TeamCity",
@@ -33,7 +35,8 @@
     "VS code",
     "JetBrains IDEA",
     "SCRUM‍",
-    "Photoshop"
+    "Photoshop",
+    "Figma"
   ],
   "Languages": ["English", "Russian", "Polish", "Czech", "French", "Spanish"]
 }
