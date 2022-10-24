@@ -5,14 +5,15 @@
     "TypeScript",
     "Rx.js",
     "D3.js",
-    "ag-grid",
-    "Moment.js‍",
+    "Ag-grid",
+    "Highcharts",
+    "Moment.js",
     "Karma/jasmine",
+    "Nightwatch",
     "React",
     "Redux",
     "jQuery",
-    "Node",
-    "AJAX‍"
+    "Node"
   ],
   "CSS": [
     "SCSS",
@@ -25,15 +26,28 @@
   "Markup": ["HTML", "SVG", "XML", "Django", "Smarty", "HTML newsletters"],
   "CMSs": ["WordPress", "Drupal", "Joomla", "OpenCart"],
   "Tools": [
+    "SonarQube",
     "Git",
     "JIRA",
     "TeamCity",
     "Gulp",
     "Webpack",
     "VS code",
-    "JetBrains IDEA",
-    "SCRUM‍",
-    "Photoshop"
+    "WebStorm",
+    "Photoshop",
+    "Figma",
+    "AWS Lambda"
   ],
-  "Languages": ["English", "Russian", "Polish", "Czech", "French", "Spanish"]
+  "Languages": ["English", "Russian", "Polish", "Czech", "French", "Spanish"],
+  "Soft Skills": [
+    "Communication",
+    "Mentoring",
+    "Problem-solving",
+    "Leadership",
+    "Product management",
+    "Agile/SCRUM",
+    "Emotional intelligence",
+    "Proactive",
+    "Self management"
+  ]
 }

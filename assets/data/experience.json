@@ -1,7 +1,23 @@
 [
   {
+    "role": "Lead software engineer",
+    "company": "EPAM Anywhere",
+    "location": "Eurasia",
+    "from_date": "01/2020",
+    "to_date": null,
+    "duties": [
+      "Integrating and supporting microfrontends architecture in my project",
+      "Leading a team of 8 JavaScript developers",
+      "Supporting 5 projects parallelly and working on the common components library making sure they are working properly",
+      "Mentoring my team members, always ready to help and support them, sharing my expertise and knowledge, reviewing code",
+      "Taking decisions on which technologies to use, making sure that they are up-to-date and optimized",
+      "Conducting technical interviews",
+      "Ensuring code quality by implementing linting, units-tests, e2e-tests"
+    ]
+  },
+  {
     "role": "Senior software engineer",
-    "company": "EPAM",
+    "company": "EPAM Systems",
     "location": "Prague, Czech Republic",
     "from_date": "05/2017",
     "to_date": "12/2019",
@@ -16,9 +32,9 @@
     ]
   },
   {
-    "role": "Front-end developer",
+    "role": "Frontend developer",
     "company": "Synergetica",
-    "location": "Remote position. Kiev, Ukraine",
+    "location": "Kiev, Ukraine",
     "from_date": "06/2015",
     "to_date": "05/2017",
     "duties": [
@@ -43,7 +59,7 @@
     ]
   },
   {
-    "role": "Front-end developer",
+    "role": "Frontend developer",
     "company": "Retail-Online",
     "location": "St. Petersburg, Russia",
     "from_date": "09/2013",
