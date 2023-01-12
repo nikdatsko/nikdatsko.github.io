@@ -8,4 +8,8 @@ import { Place } from '../home.service';
 })
 export class PlaceComponent {
   @Input() place: Place;
+
+  get location(): string[] {
+    return this.place.location ? this.place.location.split(', ') : [];
+  }
 }

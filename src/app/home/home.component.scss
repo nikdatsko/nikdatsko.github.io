@@ -3,6 +3,7 @@
 :host {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 header {
@@ -120,4 +121,8 @@ h2 {
   margin-right: 10px;
   width: 80px;
   text-align: center;
+
+  @media print {
+    margin-right: 0;
+  }
 }

@@ -7,7 +7,7 @@
   background: #fff;
   border-right: 1px $gray-border solid;
   width: 30%;
-  padding: 10px;
+  padding: 10px 10px 0;
   max-width: 400px;
   min-width: 300px;
   overflow: auto;
@@ -21,12 +21,10 @@
     flex-wrap: wrap;
     align-items: center;
 
-    & > div {
-      flex: 1;
-    }
-
-    .about {
-      flex-basis: 100%;
+    .profile {
+      div {
+        line-height: 130%;
+      }
     }
   }
 
@@ -55,6 +53,27 @@
   }
 }
 
+.key-skills {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 1px solid $gray-bg;
+  padding: 10px 0 10px 10px;
+
+  h2 {
+    line-height: 1.2em;
+    margin-bottom: 0.35em;
+  }
+
+  div {
+    display: flex;
+  }
+
+  ul {
+    margin-right: 20px;
+  }
+}
+
 .name_h {
   display: flex;
   align-items: center;
@@ -65,8 +84,11 @@
   span {
     text-shadow: 1px 0 0 $black;
     font-size: 2em;
+  }
 
-    @media print {
+  @media print {
+    justify-content: left;
+    span {
       text-shadow: none;
       font-weight: 600;
     }
@@ -81,7 +103,7 @@
     display: flex;
     align-items: center;
     font-size: 1.2em;
-    line-height: 20px;
+    line-height: 1.5em;
   }
 
   @media print, (max-width: 1000px) {
@@ -98,15 +120,6 @@
 .image4print {
   width: 90px;
   margin-right: 10px;
-}
-
-.profile {
-  @media print, (max-width: 1000px) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-  }
 }
 
 .education {

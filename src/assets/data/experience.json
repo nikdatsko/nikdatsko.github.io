@@ -2,17 +2,18 @@
   {
     "role": "Lead software engineer",
     "company": "EPAM Anywhere",
-    "location": "Eurasia",
+    "location": null,
     "from_date": "01/2020",
     "to_date": null,
     "duties": [
-      "Integrating and supporting microfrontends architecture in my project",
-      "Leading a team of 8 JavaScript developers",
-      "Supporting 5 projects parallelly and working on the common components library making sure they are working properly",
-      "Mentoring my team members, always ready to help and support them, sharing my expertise and knowledge, reviewing code",
-      "Taking decisions on which technologies to use, making sure that they are up-to-date and optimized",
-      "Conducting technical interviews",
-      "Ensuring code quality by implementing linting, units-tests, e2e-tests"
+      "Integrated microfrontends architecture in my project which increased productivity and efficiency by more than 100%",
+      "Supported 5 projects parallelly leading a team of 8 JavaScript developers both Frontend and API",
+      "Created a common UI library which was used across the customer digital products",
+      "Optimized code which improved the page load by 5 times",
+      "Ensured code quality by implementing linting, e2e-tests, units-tests with code coverage more than 90%",
+      "Participated in the mentorships program as a JavaScript and Angular mentor",
+      "Conducted webinars and live coding sessions, prepared my mentees for promotion assessments",
+      "Became a certified Technical Interviewer, interviewed more than 100 candidates"
     ]
   },
   {
@@ -22,40 +23,23 @@
     "from_date": "05/2017",
     "to_date": "12/2019",
     "duties": [
-      "Working on large Angular applications",
-      "Creating new applications, reusable components and libraries",
-      "Setting up continuous integration and delivery",
-      "Making sure business requirements are met and the project is easily maintainable with the possibility to continuously add new features and improvements",
-      "Integrating application state management",
-      "Covering code with unit-tests",
-      "Leading development of a project connecting users, designers, front and back ends"
+      "Created new large Angular applications, reusable components and libraries",
+      "Set up continuous integration and delivery in TeamCity",
+      "Worked on data visualization using D3, Highcharts, ag-grid-enterprise",
+      "Managed a project ensuring proper communication between users, designers, frontend and backend",
+      "Wrote an algorithm that converted a CSV file to HTML"
     ]
   },
   {
-    "role": "Frontend developer",
+    "role": "Software engineer",
     "company": "Synergetica",
     "location": "Kiev, Ukraine",
     "from_date": "06/2015",
     "to_date": "05/2017",
     "duties": [
-      "Migrating from jQuery multiple-page application to AngularJS single-page application",
-      "Developing interactive and dynemic corporate websites",
-      "Working on data visualisation",
-      "HTML to PDF templates coding",
-      "Responsive design development",
-      "Working in a very well set SCRUM team"
-    ]
-  },
-  {
-    "role": "Freelance web-developer",
-    "company": "Incredible journey",
-    "location": "Latin America",
-    "from_date": "01/2015",
-    "to_date": "06/2015",
-    "duties": [
-      "Converting PSD to HTML, CSS, JS",
-      "WordPress, Drupal theming",
-      "Creating a personal travel blog niklenburg.com"
+      "Migrated a jQuery multiple-page application to AngularJS single-page application",
+      "Improved customer engagement by 200% implementing CSS animations & transitions",
+      "Implemented HTML to PDF convertor which improved customer adoption by 80%"
     ]
   },
   {
@@ -63,50 +47,20 @@
     "company": "Retail-Online",
     "location": "St. Petersburg, Russia",
     "from_date": "09/2013",
-    "to_date": "01/2015",
+    "to_date": "06/2015",
     "duties": [
-      "Developing front end for corporate web sites, e-shops, landing pages",
-      "Working with WordPress, OpenCart, Joomla, Smarty PHP Template Engine and other",
-      "Coding HTML newsletters",
-      "Search Engine Optimization of the code"
+      "Developed frontend for corporate web sites, e-shops, landing pages, HTML newsletters, converting PSD to HTML, CSS, JS"
     ]
   },
   {
-    "role": "Web-developer, administrator",
+    "role": "Web-developer",
     "company": "Ludilangues",
     "location": "Strasbourg, France",
     "from_date": "09/2012",
     "to_date": "09/2013",
     "duties": [
-      "Creating web-sites from scratch: design, html/css layout, PHP templating",
-      "jQuery event handling",
-      "Installation and configuration of software",
-      "Photo editing in Photoshop",
-      "Video editing and creating video tutorials"
-    ]
-  },
-  {
-    "role": "Freelance web-developer",
-    "company": null,
-    "location": "Gdansk, Poland",
-    "from_date": "01/2012",
-    "to_date": "09/2012",
-    "duties": [
-      "Creating simple backendless web-sites",
-      "Learning CSS and JavaScript",
-      "Installing and configuring WordPress sites"
-    ]
-  },
-  {
-    "role": "Intern",
-    "company": "Skyline Exhibits & Graphics Mid-America",
-    "location": "Saint Louis, Missouri, USA",
-    "from_date": "09/2008",
-    "to_date": "09/2009",
-    "duties": [
-      "Working as a service technician",
-      "Traveling all over the states to install and dismantle of the trade show booths",
-      "Learning English interacting with Americans"
+      "Created a web-platform from scratch containing more than 20 different company's projects using HTML, CSS, JavaScript ",
+      "Came up with the designs for the websites ensuring usability and smooth user experience"
     ]
   }
 ]
