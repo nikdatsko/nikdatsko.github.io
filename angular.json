@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "nik:build"
+            "buildTarget": "nik:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "nik:build:production"
+              "buildTarget": "nik:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "nik:build"
+            "buildTarget": "nik:build"
           }
         },
         "test": {
