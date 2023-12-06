@@ -1,5 +1,5 @@
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { of } from 'rxjs';
 
@@ -14,7 +14,7 @@ describe('ContactComponent', () => {
   const formBuilder: FormBuilder = new FormBuilder();
 
   beforeEach(
-    async(() => {
+    waitForAsync(() => {
       mockContactService = jasmine.createSpyObj('ContactService', [
         'submitContactForm',
         'getResult'
@@ -36,7 +36,7 @@ describe('ContactComponent', () => {
   );
 
   beforeEach(
-    async(() => {
+    waitForAsync(() => {
       fixture = TestBed.createComponent(ContactComponent);
       component = fixture.componentInstance;
       fixture.detectChanges();
