@@ -18,7 +18,7 @@ export interface Place {
 export class HomeService {
   constructor(private http: HttpClient) {}
 
-  getData(type: DataTypes): Observable<Place[]> {
-    return this.http.get<Place[]>(`/assets/data/${type}.json`);
+  getData(type: DataTypes): Observable<any> {
+    return this.http.get<any>(`/assets/data/${type}.json`);
   }
 }

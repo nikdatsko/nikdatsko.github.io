@@ -1,10 +1,4 @@
-import { Component, HostListener } from '@angular/core';
-import { Router } from '@angular/router';
-import { select, Store } from '@ngrx/store';
-import { Observable, combineLatest } from 'rxjs';
-import { filter, take, delay } from 'rxjs/operators';
-import * as fromHome from '../home/store';
-import { Place } from '../home/home.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-header',

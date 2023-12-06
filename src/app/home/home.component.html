@@ -20,7 +20,7 @@
 </header>
 <div class="content">
   <main>
-    <app-section>
+    <app-section class="not4print">
       <ng-container article>
         <div class="heading">
           <h2>Qualifications summary</h2>
@@ -43,12 +43,18 @@
           <h2>Experience</h2>
           <span class="total"> > 10 years</span>
         </div>
-        <span *ngIf="experienceLoadingStream | async; else experienceBlock">
-          loading experience...
-        </span>
-        <ng-template #experienceBlock>
-          <app-place class="no-pagebreak" *ngFor="let place of (experienceStream | async)" [place]="place"></app-place>
-        </ng-template>
+        <app-place class="no-pagebreak" *ngFor="let place of (experienceStream | async)" [place]="place"></app-place>
+      </ng-container>
+    </app-section>
+    <app-section class="only4print">
+      <ng-container article>
+        <div class="heading">
+          <h2>Education</h2>
+          <span class="total">09/2004 - 06/2008</span>
+        </div>
+        <ul>
+          <li>Bachelor's degree in Electronic Industry Equipment, Computer Technologies, East Ukrainian State University</li>
+        </ul>
       </ng-container>
     </app-section>
   </main>
@@ -58,16 +64,11 @@
         <div class="heading">
           <h2>Skills</h2>
         </div>
-        <span *ngIf="skillsLoadingStream | async; else skillsBlock">
-          loading skills...
-        </span>
-        <ng-template #skillsBlock>
-          <div class="skillset" *ngFor="let skillset of (skillsStream | async) | keyvalue : disableReorder">
-            <h3>{{skillset.key}}</h3>
-            <div class="skill" *ngFor="let skill of skillset.value">{{skill}}</div>
-          </div>
-        </ng-template>
-      </ng-container>
+        <div class="skillset" *ngFor="let skillset of (skillsStream | async) | keyvalue : disableReorder">
+          <h3>{{skillset.key}}</h3>
+          <div class="skill" *ngFor="let skill of skillset.value">{{skill}}</div>
+        </div>
+    </ng-container>
     </app-section>
   </aside>
 </div>

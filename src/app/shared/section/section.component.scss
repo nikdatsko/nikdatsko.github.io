@@ -1,5 +1,5 @@
-@import '~src/assets/styles/variables';
-@import '~src/assets/styles/mixins';
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/mixins';
 .inner {
   box-shadow: 0 0 5px $gray-shadow;
   margin: 0 1.3888888888888888888888888888889% 10px; /*10/720*/
@@ -21,7 +21,8 @@
 @media print {
   .inner {
     box-shadow: none;
-    padding: 0;
+    padding: 0 0 20px;
+    margin-bottom: 0;
   }
   .padding {
     padding: 0;

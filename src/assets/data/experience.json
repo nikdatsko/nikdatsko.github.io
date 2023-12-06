@@ -1,7 +1,7 @@
 [
   {
     "role": "Lead software engineer",
-    "company": "EPAM Anywhere",
+    "company": "EPAM Canada",
     "location": "Vancouver, BC, Canada",
     "from_date": "07/2023",
     "to_date": null,
@@ -48,7 +48,7 @@
     "duties": [
       "Created new large Angular applications, reusable components and libraries",
       "Set up continuous integration and delivery on AWS cloud",
-      "Worked on data visualization using D3, Highcharts, ag-grid-enterprise",
+      "Worked on data visualization using D3.js, Highcharts, ag-grid-enterprise",
       "Managed a project ensuring proper communication between users, designers, frontend and backend",
       "Wrote project documentation and coding guide describing used design patterns and architecture"
     ]

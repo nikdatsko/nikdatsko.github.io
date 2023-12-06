@@ -1,8 +1,6 @@
-import { Place } from './home.service';
+import { HomeService, Place } from './home.service';
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import * as fromStore from './store';
 import { DataTypes } from './home.enum';
 
 @Component({
@@ -12,22 +10,9 @@ import { DataTypes } from './home.enum';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent {
-  readonly experienceStream: Observable<Place[]> = this.store.pipe(
-    select(fromStore.getExperience)
-  );
-  readonly skillsStream: Observable<{
-    [key: string]: string[];
-  }> = this.store.pipe(select(fromStore.getSkills));
-  readonly experienceLoadingStream: Observable<boolean> = this.store.pipe(
-    select(fromStore.getExperienceLoading)
-  );
-  readonly skillsLoadingStream: Observable<boolean> = this.store.pipe(
-    select(fromStore.getSkillsLoading)
-  );
+  readonly experienceStream: Observable<Place[]> = this.homeService.getData(DataTypes.experience);
+  readonly skillsStream: Observable<{[key: string]: string[]}> = this.homeService.getData(DataTypes.skills);
   disableReorder = () => 0;
 
-  constructor(private store: Store<fromStore.HomeRootState>) {
-    this.store.dispatch(new fromStore.LoadData(DataTypes.experience));
-    this.store.dispatch(new fromStore.LoadData(DataTypes.skills));
-  }
+  constructor(private homeService: HomeService) {}
 }
