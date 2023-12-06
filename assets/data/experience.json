@@ -6,9 +6,9 @@
     "from_date": "07/2023",
     "to_date": null,
     "duties": [
-      "Working in research department developing customizable components",
-      "Creating architecture of the UI application, its configurability, scalability, and maintainability",
-      "Developing a backend service using Google Cloud Platform, Node.js, MySQL"
+      "Working in the research department and developing customizable components",
+      "Creating the architecture of the UI application, focusing on its configurability, scalability, and maintainability",
+      "Developing a backend service using Google Cloud Platform with Node.js and MySQL"
     ]
   },
   {
@@ -18,9 +18,9 @@
     "from_date": "05/2023",
     "to_date": "07/2023",
     "duties": [
-      "Completed supply management system redesign",
-      "Updated projects dependancies, cleaned, restructured and optimized the code",
-      "Created a common UI library used across the customer digital products"
+      "Completed the supply management system redesign",
+      "Updated the project dependencies, cleaned, restructured, and optimized the code",
+      "Created a common UI library used across the customer's digital products"
     ]
   },
   {
