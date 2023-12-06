@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { ContactService } from './contact.service';
@@ -10,7 +10,7 @@ import { ContactService } from './contact.service';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit, OnDestroy {
-  contactForm: FormGroup;
+  contactForm: UntypedFormGroup;
   isSubmitted: boolean;
   isFail: boolean;
   occupations: string[] = [
@@ -24,7 +24,7 @@ export class ContactComponent implements OnInit, OnDestroy {
   private unsubscribeStream = new Subject();
 
   constructor(
-    private fb: FormBuilder,
+    private fb: UntypedFormBuilder,
     private contactService: ContactService
   ) {}
 

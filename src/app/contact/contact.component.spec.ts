@@ -1,4 +1,4 @@
-import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { UntypedFormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { of } from 'rxjs';
@@ -11,7 +11,7 @@ describe('ContactComponent', () => {
   let fixture: ComponentFixture<ContactComponent>;
   let mockContactService;
 
-  const formBuilder: FormBuilder = new FormBuilder();
+  const formBuilder: UntypedFormBuilder = new UntypedFormBuilder();
 
   beforeEach(
     waitForAsync(() => {
@@ -27,7 +27,7 @@ describe('ContactComponent', () => {
         declarations: [ContactComponent],
         imports: [ReactiveFormsModule],
         providers: [
-          { provide: FormBuilder, useValue: formBuilder },
+          { provide: UntypedFormBuilder, useValue: formBuilder },
           { provide: ContactService, useValue: mockContactService }
         ],
         schemas: [CUSTOM_ELEMENTS_SCHEMA]
