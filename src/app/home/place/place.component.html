@@ -9,8 +9,7 @@
 <h2>{{place?.role}}</h2>
 <h3 *ngIf="!!place?.company">{{place.company}}</h3>
 <h4 *ngIf="!!place?.location">
-  <span class="city">{{location[0]}}, </span>
-  <span class="country">{{location[1]}}</span>
+  <span class="location" [class.city]="!i" *ngFor="let l of location; let i = index">{{l}}</span>
 </h4>
 <ul>
   <li *ngFor="let duty of place?.duties">{{duty}}</li>

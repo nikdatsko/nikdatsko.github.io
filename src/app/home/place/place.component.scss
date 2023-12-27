@@ -21,6 +21,14 @@
   }
 }
 
+.location {
+  &:not(:last-child) {
+    &::after {
+      content: ", ";
+    }
+  }
+}
+
 ul {
   clear: both;
 }
@@ -69,10 +77,6 @@ ul {
       content: ",";
       display: inline-block;
       padding-right: 4px;
-    }
-
-    .city {
-      display: none;
     }
   }
 }

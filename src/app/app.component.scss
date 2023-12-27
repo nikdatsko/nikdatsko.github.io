@@ -1,4 +1,7 @@
-@import 'src/assets/styles/mixins';
+@import url('//fonts.googleapis.com/css?family=Muli:400,400italic');
+@import 'assets/styles/reset.scss';
+@import 'assets/styles/mixins.scss';
+@import 'assets/styles/global.scss';
 
 .outer {
   flex: 1;

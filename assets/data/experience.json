@@ -1,7 +1,7 @@
 [
   {
     "role": "Lead software engineer",
-    "company": "EPAM Canada",
+    "company": "EPAM Systems",
     "location": "Vancouver, BC, Canada",
     "from_date": "07/2023",
     "to_date": null,
@@ -25,8 +25,8 @@
   },
   {
     "role": "Lead software engineer",
-    "company": "EPAM Anywhere",
-    "location": null,
+    "company": "Novartis",
+    "location": "Remote",
     "from_date": "01/2020",
     "to_date": "03/2023",
     "duties": [
@@ -41,7 +41,7 @@
   },
   {
     "role": "Senior software engineer",
-    "company": "EPAM Systems",
+    "company": "Barclays",
     "location": "Prague, Czech Republic",
     "from_date": "07/2017",
     "to_date": "12/2019",
@@ -55,26 +55,15 @@
   },
   {
     "role": "Freelance Web-Developer",
-    "company": "Start-ups",
+    "company": "different companies and start-ups",
     "location": "Remote",
-    "from_date": "01/2017",
+    "from_date": "01/2015",
     "to_date": "07/2017",
     "duties": [
-      "Developed user interfaces for web apps using Bootstrap and Material UI",
-      "Implemented web-sockets communication and state management using ngrx in an Angular app",
-      "Visualized a ships tracking system using Google Map API"
-    ]
-  },
-  {
-    "role": "Software engineer",
-    "company": "Synergetica",
-    "location": "Kiev, Ukraine",
-    "from_date": "01/2015",
-    "to_date": "01/2017",
-    "duties": [
-      "Completed migration from jQuery to AngularJS single-page app for an influencer marketing platform",
-      "Developed interactive and dynamic corporate websites using CSS3 animations & transitions",
-      "Implemented HTML to PDF converter"
+      "Developed user interfaces for web apps using CSS3 animations & transitions, Bootstrap and Material UI",
+      "Implemented web-sockets communication and state management architecture",
+      "Visualized a ships tracking system at Succorfish using Google Map API",
+      "Completed migration from jQuery to AngularJS single-page app for an influencer marketing platform"
     ]
   },
   {

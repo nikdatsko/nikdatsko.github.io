@@ -13,6 +13,10 @@ header {
 
   h1 {
     margin-right: auto;
+
+    @media print {
+      font-size: 1.7em;
+    }
   }
 
   @media (max-width: 600px) {
@@ -27,14 +31,6 @@ header {
       }
     }
   }
-}
-
-.portfolio {
-  margin-left: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 1.1em;
-  text-shadow: 0.5px 0.1px 0 $blue;
 }
 
 .print {
