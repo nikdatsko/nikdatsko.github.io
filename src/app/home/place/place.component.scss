@@ -3,6 +3,10 @@
   display: block;
   margin-bottom: 20px;
   clear: both;
+
+  @media print {
+    margin-bottom: 12px;
+  }
 }
 
 .date {
@@ -58,6 +62,7 @@ ul {
     display: inline-block;
     margin-right: .2em;
     font-weight: bold;
+    font-size: 1.2em;
   }
 
   h3 {

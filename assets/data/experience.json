@@ -6,9 +6,10 @@
     "from_date": "07/2023",
     "to_date": null,
     "duties": [
-      "Working in the research department and developing customizable components",
-      "Creating the architecture of the UI application, focusing on its configurability, scalability, and maintainability",
-      "Developing a backend service using Google Cloud Platform with Node.js and MySQL"
+      "Working with Angular 16+, advanced scrolling, transitions, and animation techniques",
+      "Architecturing a research application, focusing on its configurability, scalability, and reusability",
+      "Transforming Angular components to custom framework agnostic Web Components",
+      "Developing a backend service using Google Cloud Platform with Node.js, Express, and MySQL"
     ]
   },
   {
@@ -18,9 +19,8 @@
     "from_date": "05/2023",
     "to_date": "07/2023",
     "duties": [
-      "Completed the supply management system redesign",
-      "Updated the project dependencies, cleaned, restructured, and optimized the code",
-      "Created a common UI library used across the customer's digital products"
+      "Curated a complete project redesign and common UI library creation used across the customer's digital products",
+      "Optimized the bundle size, performance, scalability, and usability"
     ]
   },
   {
@@ -30,11 +30,9 @@
     "from_date": "01/2020",
     "to_date": "03/2023",
     "duties": [
-      "Integrated microfrontends architecture in my project which increased productivity and efficiency by more than 100%",
-      "Supported 5 projects parallelly leading a team of 8 JavaScript developers both Frontend and API",
+      "Was leading a team of 8 developers from 5 projects where I integrated microfrontends architecture",
       "Built BFF query handlers with AWS Lambda functions in NodeJS",
-      "Optimized code which improved the page load by 5 times",
-      "Ensured code quality by implementing linting with ESLint, units-tests with Jest, e2e-tests with Cypress",
+      "Set up CI/CD, implemented linting, integrated units-tests and e2e-tests, configured SonarQube",
       "Added a standalone Angular application to Nx monorepo where I implemented reusable components",
       "Conducted webinars and live coding sessions, prepared my mentees for promotion assessments"
     ]
@@ -46,10 +44,8 @@
     "from_date": "07/2017",
     "to_date": "12/2019",
     "duties": [
-      "Created new large Angular applications, reusable components and libraries",
-      "Set up continuous integration and delivery on AWS cloud",
+      "Created and maintained large Angular applications, reusable components and libraries",
       "Worked on data visualization using D3.js, Highcharts, ag-grid-enterprise",
-      "Managed a project ensuring proper communication between users, designers, frontend and backend",
       "Wrote project documentation and coding guide describing used design patterns and architecture"
     ]
   },
